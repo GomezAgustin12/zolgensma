@@ -33,12 +33,12 @@
       </div>
     </div>
 
-    <div id="myObjet" class="modobj">
+    <!-- <div id="myObjet" class="modobj">
       <div class="modal-objeto">
         <span class="cerrar">&times;</span>
         <p><img src="images/matafuegozoom.png" alt="" /></p>
       </div>
-    </div>
+    </div> -->
 
     <div id="objetshow" class="Objeshow">
       <div class="objetoshow">
@@ -136,10 +136,20 @@
             <img src="images/transparente.png" alt="" />
           </button>
         </div>
+
+        <div id="exitp2puerta" class="objeto">
+          <button
+            id=""
+            role="link"
+            onclick="window.location='pantalla5_farmacia.html'"
+          >
+            <img src="images/exit.png" alt="" />
+          </button>
+        </div>
       </div>
     </div>
 
-	<script src="js/cartera.js"></script>
+    <script src="js/cartera.js"></script>
     <script src="js/elementos.js"></script>
 
     <script>
@@ -149,6 +159,8 @@
 
       var span = document.getElementsByClassName("close")[0];
       var span = document.getElementsByClassName("modal")[0];
+
+      $("#heladera1").click(() => cartera.agregar(ZOLGENSMA));
 
       btn.onclick = function () {
         modal.style.display = "block";

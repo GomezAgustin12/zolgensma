@@ -8,3 +8,4 @@ var FICHA3B = { imagen: "images/fichas/hc3b.png", id: "ficha3b" };
 var FICHA1C = { imagen: "images/fichas/hc1c.png", id: "ficha1c" };
 var FICHA2C = { imagen: "images/fichas/hc2c.png", id: "ficha2c" };
 var FICHA3C = { imagen: "images/fichas/hc3c.png", id: "ficha3c" };
+var ZOLGENSMA = { imagen: "images/zolgensma.png" };

@@ -17,6 +17,28 @@
   </head>
 
   <body>
+    <style>
+      .indicacion-quiz-btn {
+        width: 100%;
+        height: 20%;
+        background-color: rgba(142, 35, 159, 0.3);
+        margin: 2px 0;
+      }
+
+      .indicacion-quiz-btn3 {
+        width: calc(33% - 10px);
+        height: 10%;
+        background-color: rgba(142, 35, 159, 0.3);
+        margin: 2px 2px;
+      }
+
+      #display-solucion {
+        background-color: rgba(142, 35, 159, 0.5);
+        height: 15%;
+        margin: 5px 0;
+      }
+    </style>
+
     <div id="myModal" class="modal">
       <div class="modal-content">
         <p class="close">&times;</p>
@@ -40,10 +62,41 @@
       </div>
     </div>
 
-    <div id="objetshow" class="Objeshow">
+    <div id="objetshow" class="Objeshow indicacion-quiz1">
       <div class="indicacion">
         <h3>INDICACIÓN</h3>
-        <p>Esta es la indicación</p>
+        <p>Prednisolona (1mg/1kg 24 hs antes de la aplicación).</p>
+      </div>
+    </div>
+
+    <div id="objetshow1" class="Objeshow indicacion-quiz2">
+      <div class="indicacion">
+        <h3>Seleccione el medicamento indicado</h3>
+        <button class="indicacion-quiz-btn">Ibuprofeno</button>
+        <button class="indicacion-quiz-btn">Paracetamol</button>
+        <button id="indicacion-quiz-solucion" class="indicacion-quiz-btn">
+          Prednisolona
+        </button>
+      </div>
+    </div>
+
+    <div id="objetshow1" class="Objeshow indicacion-quiz3">
+      <div class="indicacion">
+        <h3 style="margin-bottom: 0px">
+          ¿Cuántos mg de prednisolona hay que darle a nuestro paciente de 5
+          kilos?
+        </h3>
+        <h3 id="display-solucion"></h3>
+        <button value="1" class="indicacion-quiz-btn3">1</button>
+        <button value="2" class="indicacion-quiz-btn3">2</button>
+        <button value="3" class="indicacion-quiz-btn3">3</button>
+        <button value="4" class="indicacion-quiz-btn3">4</button>
+        <button value="5" class="indicacion-quiz-btn3">5</button>
+        <button value="6" class="indicacion-quiz-btn3">6</button>
+        <button value="7" class="indicacion-quiz-btn3">7</button>
+        <button value="8" class="indicacion-quiz-btn3">8</button>
+        <button value="9" class="indicacion-quiz-btn3">9</button>
+        <button value="0" class="indicacion-quiz-btn3">0</button>
       </div>
     </div>
 
@@ -137,6 +190,24 @@
       var span = document.getElementsByClassName("close")[0];
       var span = document.getElementsByClassName("modal")[0];
 
+      $(".indicacion-quiz1").click(() => {
+        $(".indicacion-quiz1").css({ display: "none" });
+        $(".indicacion-quiz2").css({ display: "block" });
+      });
+
+      $("#indicacion-quiz-solucion").click(() => {
+        $(".indicacion-quiz2").css({ display: "none" });
+        $(".indicacion-quiz3").css({ display: "block" });
+      });
+      $(".indicacion-quiz-btn3").click((e) => {
+        console.log(e.target.attributes[0].value);
+
+        $("#display-solucion").html(e.target.attributes[0].value.toString());
+        if ($("#display-solucion").html() === "5") {
+          window.location = "pantalla7.html";
+        }
+      });
+
       btn.onclick = function () {
         modal.style.display = "block";
       };
@@ -178,7 +249,7 @@
 
       var obj = document.getElementById("Objshow");
       var cierro = document.getElementsByClassName("cerrar")[0];
-      var cierro = document.getElementsByClassName("Objeshow")[0];
+      var objeshow = document.getElementsByClassName("Objeshow")[0];
       obj.onclick = function () {
         objetshow.style.display = "block";
         fondo.style.filter = "blur(4px)";
@@ -189,7 +260,7 @@
       };
 
       window.onclick = function (event) {
-        if (event.target == Objeshow) {
+        if (event.target == objeshow) {
           objetshow.style.display = "none";
         }
       };

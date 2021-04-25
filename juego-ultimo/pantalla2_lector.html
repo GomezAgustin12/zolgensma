@@ -135,8 +135,8 @@
       var span = document.getElementsByClassName("modal")[0];
 
       $("#lector-btn").click(() => {
-        // console.log(cartera.existe(TARJETA));
         if (cartera.existe(TARJETA)) {
+          cartera.quitar(TARJETA);
           window.location = "pantalla3.html";
         } else {
           console.log("object");
