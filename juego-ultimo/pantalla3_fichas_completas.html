@@ -136,13 +136,13 @@
         <div id="hc2c" class="objeto">
           <button id=""><img src="images/fichas/hc2c.png" alt="" /></button>
         </div>
-        <div id="hc3a" class="objeto">
+        <div id="hc3a" class="objeto historia-correcta">
           <button id=""><img src="images/fichas/hc3a.png" alt="" /></button>
         </div>
-        <div id="hc3b" class="objeto">
+        <div id="hc3b" class="objeto historia-correcta">
           <button id=""><img src="images/fichas/hc3b.png" alt="" /></button>
         </div>
-        <div id="hc3c" class="objeto">
+        <div id="hc3c" class="objeto historia-correcta">
           <button id=""><img src="images/fichas/hc3c.png" alt="" /></button>
         </div>
 
@@ -154,7 +154,7 @@
       </div>
     </div>
 
-	<script src="js/cartera.js"></script>
+    <script src="js/cartera.js"></script>
     <script src="js/elementos.js"></script>
 
     <script>
@@ -185,6 +185,10 @@
 
       var cierro = document.getElementsByClassName("cerrar")[0];
       var cierro = document.getElementsByClassName("modobj")[0];
+
+      $(".historia-correcta").click(
+        () => (window.location = "pantalla5_farmacia.html")
+      );
 
       obj.onclick = function () {
         myObjet.style.display = "block";

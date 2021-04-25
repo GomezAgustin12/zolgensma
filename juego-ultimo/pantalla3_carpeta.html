@@ -32,13 +32,13 @@
         </p>
       </div>
     </div>
-
+    <!-- 
     <div id="myObjet" class="modobj">
       <div class="modal-objeto">
         <span class="cerrar">&times;</span>
         <p><img src="images/matafuegozoom.png" alt="" /></p>
       </div>
-    </div>
+    </div> -->
 
     <div id="objetshow" class="Objeshow">
       <div class="objetoshow">
@@ -108,11 +108,7 @@
         </script>
 
         <div id="carpeta" class="objeto">
-          <button
-            id=""
-            role="link"
-            onclick="window.location='pantalla3_fichas.html'"
-          >
+          <button id="carpeta-btn" role="link">
             <img src="images/carpeta.png" alt="" />
           </button>
         </div>
@@ -155,6 +151,32 @@
 
       var cierro = document.getElementsByClassName("cerrar")[0];
       var cierro = document.getElementsByClassName("modobj")[0];
+
+      $("#carpeta-btn").click(() => {
+        const verificarHistoriasClinicas = () => {
+          if (!cartera.existe(FICHA1B)) return false;
+          if (!cartera.existe(FICHA2B)) return false;
+          if (!cartera.existe(FICHA3B)) return false;
+          if (!cartera.existe(FICHA1C)) return false;
+          if (!cartera.existe(FICHA2C)) return false;
+          if (!cartera.existe(FICHA3C)) return false;
+          return true;
+        };
+
+        if (verificarHistoriasClinicas()) {
+          cartera.quitar(FICHA1B);
+          cartera.quitar(FICHA2B);
+          cartera.quitar(FICHA3B);
+          cartera.quitar(FICHA1C);
+          cartera.quitar(FICHA2C);
+          cartera.quitar(FICHA3C);
+          cartera.quitar(CINTA);
+          cartera.quitar(ABROCHADORA);
+          window.location = "pantalla3_fichas_completas.html";
+        } else {
+          window.location = "pantalla3_fichas.html";
+        }
+      });
 
       obj.onclick = function () {
         myObjet.style.display = "block";

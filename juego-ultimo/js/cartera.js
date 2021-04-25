@@ -16,7 +16,6 @@ $(document).ready(function () {
       );
 
       carteraArray.forEach((e, i) => {
-        console.log(e);
         $(`.objeto${i + 1}`).css({
           "background-image": `url(${e})`,
           "background-repeat": "no-repeat",
