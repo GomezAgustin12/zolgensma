@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
+<link href="styles.css" rel="stylesheet" type="text/css">
+	     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <p class="close">&times;</p>
+    <p>La tarjeta de acceso al consultorio está en un cajón con llave dentro de la recepción.
+Primero, hay que buscar la llave del cajón, la cual está debajo de una de las macetas
+de las plantas. Hay que mover las cuatro o cinco macetas de lugar hasta encontrar la
+llave en el piso. Luego hay que entrar a la recepción, abrir el cajón con la llave y
+retirarla entre varias tarjetas. De la recepción, también se puede tomar una
+abrochadora y una cinta scotch que nos servirá más adelante...</p>
+  </div>
+</div>	
+	
+<div id="myObjet" class="modobj">
+  <div class="modal-objeto">
+   <span class="cerrar">&times;</span>
+    <p><img src="images/matafuegozoom.png" alt=""/></p>
+  </div>
+</div>	
+	
+<div id="objetshow" class="Objeshow">
+  <div class="objetoshow">
+  
+    <p><img src="images/planta2zoom.png" alt=""/></p>
+  </div>
+</div>	
+	
+<div id="fondo">
+<div id="content" class="pantalla3hc2b">
+		
+	<div class="textos">Se necesita médico en neonatología.</div>	<button class="help" id="myBtn"><img src="images/help.png"  alt=""/></button> <div class="verticalCarousel">
+	<div class="verticalCarouselHeader">
+                <h3>Mis Objetos</h3>
+                <a href="#" class="vc_goDown"><i class="fa fa-fw fa-angle-down"></i></a>
+                <a href="#" class="vc_goUp"><i class="fa fa-fw fa-angle-up"></i></a>
+            </div>
+  <div class="panel">
+	  <ul class="verticalCarouselGroup vc_list">
+		  <li>
+	<div class="marco objeto1 col1" id="myObj"></div>
+	<div  class="marco objeto2 col2"></div></li>
+		<li>
+	<div class="marco objeto3 col1"></div>
+			<div  class="marco objeto4 col2"></div></li>
+		
+		<li>
+	<div class="marco objeto3 col1"></div>
+			<div  class="marco objeto4 col2"></div></li>
+		
+		<li>
+	<div class="marco objeto3 col1"></div>
+			<div  class="marco objeto4 col2"></div></li>
+		  
+		  	<li>
+	<div class="marco objeto3 col1"></div>
+			<div  class="marco objeto4 col2"></div></li>
+		  
+		  	<li>
+	<div class="marco objeto3 col1"></div>
+			<div  class="marco objeto4 col2"></div></li>
+		  
+		  	<li>
+	<div class="marco objeto3 col1"></div>
+			<div  class="marco objeto4 col2"></div></li>
+	  </ul>
+	
+	</div></div>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/jQuery.verticalCarousel.js"></script>
+        <script>
+            $(".verticalCarousel").verticalCarousel({
+                currentItem: 1,
+                showItems: 4,
+            });
+        </script>
+	
+	
+	<div id="ficha2b" class="objeto"><button  id=""><img src="images/fichas/hc2b.png" alt=""/></button></div>
+	<div id="botiquin" class="objeto HiddenObj"><button  id="HiddenObj"><img src="images/botiquin.png" alt=""/></button></div>
+	
+
+	<div id="exitp2puerta" class="objeto"><button  id="" role="link" onclick="window.location='pantalla3.html'"><img src="images/exit.png" alt=""/></button></div>
+	
+	
+	
+	
+	
+	
+	</div>
+	
+	</div>
+	
+	
+	<script>
+
+		var modalobj = document.getElementById("HiddenObj");
+var obj = document.getElementById("botiquin");
+		
+obj.onclick = function() {
+  HiddenObj.style.display = "none";
+
+}
+		
+		
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("modal")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+		
+
+var modalobj = document.getElementById("myObjet");
+
+var obj = document.getElementById("myObj");
+
+var cierro = document.getElementsByClassName("cerrar")[0];
+var cierro = document.getElementsByClassName("modobj")[0];
+ 
+obj.onclick = function() {
+  myObjet.style.display = "block";
+	fondo.style.filter = "blur(2px)";
+}
+
+cierro.onclick = function() {
+  myObjet.style.display = "none";
+	fondo.style.filter = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modobj) {
+    myObjet.style.display = "none";
+  }
+}
+
+
+		
+
+var modalobj = document.getElementById("objetshow");
+
+var obj = document.getElementById("Objshow");
+var cierro = document.getElementsByClassName("cerrar")[0];
+var cierro = document.getElementsByClassName("Objeshow")[0];
+obj.onclick = function() {
+  objetshow.style.display = "block";
+	fondo.style.filter = "blur(4px)";
+}
+cierro.onclick = function() {
+  objetshow.style.display = "none";
+	fondo.style.filter = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == Objeshow) {
+    objetshow.style.display = "none";
+  }
+}
+
+</script>
+</body>
+</html>
