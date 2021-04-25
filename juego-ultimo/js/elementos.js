@@ -1,4 +1,4 @@
-var LLAVE = "images/llave.png";
-var CINTA = "images/cinta.png";
-var TARJETA = "images/tarjeta.png";
-var ABROCHADORA = "images/abrochadora.png";
+var LLAVE = { imagen: "images/llave.png" };
+var CINTA = { imagen: "images/cinta.png", id: "cinta" };
+var TARJETA = { imagen: "images/tarjeta.png", id: "tarjeta" };
+var ABROCHADORA = { imagen: "images/abrochadora.png", id: "abrochadora" };

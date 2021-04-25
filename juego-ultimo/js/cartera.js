@@ -16,12 +16,19 @@ $(document).ready(function () {
       );
 
       carteraArray.forEach((e, i) => {
+        console.log(e);
         $(`.objeto${i + 1}`).css({
           "background-image": `url(${e})`,
           "background-repeat": "no-repeat",
           "background-position": "center",
           "background-size": "contain",
         });
+      });
+
+      var displayNoneList = localStorage.getItem("displayNoneList").split(", ");
+
+      displayNoneList.forEach((e) => {
+        $(`#${e}`).css({ display: "none" });
       });
     },
     get: () => {
@@ -31,30 +38,41 @@ $(document).ready(function () {
         return localStorage.getItem("cartera").split(", ");
       }
     },
-    getOne: (elemento) => {
-      carteraArray.find((e) => e === elemento);
+    getOne: ({ imagen }) => {
+      carteraArray.find((e) => {
+        console.log(e, imagen);
+        return e === imagen;
+      });
     },
-    existe: (elemento) => carteraArray.includes(elemento),
-    agregar: (elemento) => {
-      if (cartera.existe(elemento)) return;
+    existe: ({ imagen }) => carteraArray.includes(imagen),
+    agregar: ({ imagen, id = null }) => {
+      if (cartera.existe(imagen)) return;
       if (localStorage.getItem("cartera") === null) {
-        localStorage.setItem("cartera", elemento);
+        localStorage.setItem("cartera", imagen);
+        if (id !== null) {
+          localStorage.setItem("displayNoneList", id);
+        }
       } else {
         localStorage.setItem(
           "cartera",
-          localStorage.getItem("cartera") + ", " + elemento
+          localStorage.getItem("cartera") + ", " + imagen
         );
+        if (id !== null) {
+          localStorage.setItem(
+            "displayNoneList",
+            localStorage.getItem("displayNoneList") + ", " + id
+          );
+        }
       }
-      //AGREGAR DISPLAY: NONE AL ELEMENTO ELIMINADO
       carteraArray = localStorage.getItem("cartera").split(", ") || [];
       cartera.actualizar();
     },
-    quitar: (elemento) => {
+    quitar: ({ imagen }) => {
       if (localStorage.getItem("cartera") === null) {
         console.log("LOCAL STORAGE EMPTY");
         return;
       } else {
-        carteraArray = carteraArray.filter((e) => e !== elemento);
+        carteraArray = carteraArray.filter((e) => e !== imagen);
         if (carteraArray.length === 0) {
           localStorage.removeItem("cartera");
         } else {
