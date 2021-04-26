@@ -1,0 +1,401 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
+<link href="styles.css" rel="stylesheet" type="text/css">
+	     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="Macetas" class="puzzle">
+  <div class="puzzleshow">
+    <p class="close">&times;</p>
+        <!-- container -->
+<div class="container">
+
+  <div class="main-canvas2">
+ <div class="bckpmedicamentos">
+   
+       <div class="caja caja1"><img src="images/amoxilina.png"  alt=""/></div>
+        <div class="caja caja2"><img src="images/paracetamol.png"  alt=""/></div>
+        <div class="caja caja3"><img src="images/aspirina.png"  alt=""/></div>
+     <div class="caja caja4"><img src="images/ibuprofeno.png"  alt=""/></div></div>
+        
+
+    </div>
+
+</div><!-- container -->
+  </div>
+</div>	
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <p class="close">&times;</p>
+    <p>La tarjeta de acceso al consultorio está en un cajón con llave dentro de la recepción.
+Primero, hay que buscar la llave del cajón, la cual está debajo de una de las macetas
+de las plantas. Hay que mover las cuatro o cinco macetas de lugar hasta encontrar la
+llave en el piso. Luego hay que entrar a la recepción, abrir el cajón con la llave y
+retirarla entre varias tarjetas. De la recepción, también se puede tomar una
+abrochadora y una cinta scotch que nos servirá más adelante...</p>
+  </div>
+</div>	
+	
+<div id="myObjet" class="modobj">
+  <div class="modal-objeto">
+   <span class="cerrar">&times;</span>
+    <p><img src="images/zoom/matafuego.png" alt=""/></p>
+  </div>
+</div>	
+	
+<div id="objetshow" class="Objeshow">
+  <div class="objetoshow">
+  
+    <p><img src="images/zoom/matafuego.png" alt=""/></p>
+  </div>
+</div>	
+	<div id="objetshow1" class="Objeshow1">
+  <div class="objetoshow1">
+  
+    <p><img src="images/zoom/cuadro1.png" alt=""/></p>
+  </div>
+</div>	
+	<div id="objetshow2" class="Objeshow2">
+  <div class="objetoshow2">
+  
+    <p><img src="images/zoom/cuadro2.png" alt=""/></p>
+  </div>
+</div>	
+	<div id="objetshow3" class="Objeshow3">
+  <div class="objetoshow3">
+  
+    <p><img src="images/zoom/cuadro3.png" alt=""/></p>
+  </div>
+</div>	
+	<div id="objetshow4" class="Objeshow4">
+  <div class="objetoshow4">
+  
+    <p><img src="images/zoom/cartel.png" alt=""/></p>
+  </div>
+</div>	
+	
+<div id="fondo">
+<div id="content" class="puzzleheladeras">
+		
+	<div class="textos">Se necesita médico en neonatología.</div>	<button class="help" id="myBtn"><img src="images/help.png"  alt=""/></button> <div class="verticalCarousel">
+	<div class="verticalCarouselHeader">
+                <h3>Mis Objetos</h3>
+                <a href="#" class="vc_goDown"><i class="fa fa-fw fa-angle-down"></i></a>
+                <a href="#" class="vc_goUp"><i class="fa fa-fw fa-angle-up"></i></a>
+            </div>
+  <div class="panel">
+	  <ul class="verticalCarouselGroup vc_list">
+		  <li>
+	<div class="marco objeto1 col1" id="myObj"></div>
+	<div  class="marco objeto2 col2"></div></li>
+		<li>
+	<div class="marco objeto3 col1"></div>
+			<div  class="marco objeto4 col2"></div></li>
+		
+		<li>
+	<div class="marco objeto3 col1"></div>
+			<div  class="marco objeto4 col2"></div></li>
+		
+		<li>
+	<div class="marco objeto3 col1"></div>
+			<div  class="marco objeto4 col2"></div></li>
+		  
+		  	<li>
+	<div class="marco objeto3 col1"></div>
+			<div  class="marco objeto4 col2"></div></li>
+		  
+		  	<li>
+	<div class="marco objeto3 col1"></div>
+			<div  class="marco objeto4 col2"></div></li>
+		  
+		  	<li>
+	<div class="marco objeto3 col1"></div>
+			<div  class="marco objeto4 col2"></div></li>
+	  </ul>
+	
+	</div></div>
+	 
+        <script src="js/jQuery.verticalCarousel.js"></script>
+        <script>
+            $(".verticalCarousel").verticalCarousel({
+                currentItem: 1,
+                showItems: 4,
+            });
+        </script>
+	
+	
+	
+	<div id="paracetamol" class="objeto"><button  id="myMacetas"><img src="images/transparente.png"  alt=""/></button></div>
+	
+	<div id="aspirina" class="objeto"><button  id="myMacetas2"><img src="images/transparente.png" alt=""/></button ></div>
+	
+	<div id="ibuprofeno" class="objeto"><button  id="myMacetas3"><img src="images/transparente.png" alt=""/></button></div>
+	
+	<div id="amoxidal" class="objeto"><button  id="myMacetas4"><img src="images/transparente.png" alt=""/></button></div>
+	
+	
+	<div id="exitp2puerta" class="objeto"><button  id="" role="link" onclick="window.location='pantalla5_cajonera.html'"><img src="images/exit.png" alt=""/></button></div>
+	
+	
+	
+	
+	
+	
+	</div>
+	
+	</div>
+	
+	
+	<script>
+	
+		var puzzle = document.getElementById("Macetas");
+
+var btn = document.getElementById("myMacetas");
+var btn2 = document.getElementById("myMacetas2");
+var btn3 = document.getElementById("myMacetas3");
+var btn4 = document.getElementById("myMacetas4");
+		
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  puzzle.style.display = "block";
+		fondo.style.filter = "blur(2px)";
+}
+
+btn2.onclick = function() {
+  puzzle.style.display = "block";
+		fondo.style.filter = "blur(2px)";
+}
+
+btn3.onclick = function() {
+  puzzle.style.display = "block";
+		fondo.style.filter = "blur(2px)";
+}
+
+btn4.onclick = function() {
+  puzzle.style.display = "block";
+		fondo.style.filter = "blur(2px)";
+}
+
+span.onclick = function() {
+  puzzle.style.display = "none";
+	fondo.style.filter = "none";
+}
+	
+	
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("modal")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+		
+
+var modalobj = document.getElementById("myObjet");
+
+var obj = document.getElementById("myObj");
+
+var cierro = document.getElementsByClassName("cerrar")[0];
+var cierro = document.getElementsByClassName("modobj")[0];
+ 
+obj.onclick = function() {
+  myObjet.style.display = "block";
+	fondo.style.filter = "blur(2px)";
+}
+
+cierro.onclick = function() {
+  myObjet.style.display = "none";
+	fondo.style.filter = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modobj) {
+    myObjet.style.display = "none";
+  }
+}
+
+
+		
+
+var modalobj = document.getElementById("objetshow");
+
+var obj = document.getElementById("Objshow");
+var cierro = document.getElementsByClassName("cerrar")[0];
+var cierro = document.getElementsByClassName("Objeshow")[0];
+obj.onclick = function() {
+  objetshow.style.display = "block";
+	fondo.style.filter = "blur(4px)";
+}
+cierro.onclick = function() {
+  objetshow.style.display = "none";
+	fondo.style.filter = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == Objeshow) {
+    objetshow.style.display = "none";
+  }
+}
+
+
+var modalobj = document.getElementById("objetshow1");
+
+var obj = document.getElementById("Objshow1");
+var cierro = document.getElementsByClassName("cerrar")[0];
+var cierro = document.getElementsByClassName("Objeshow1")[0];
+obj.onclick = function() {
+  objetshow1.style.display = "block";
+	fondo.style.filter = "blur(4px)";
+}
+cierro.onclick = function() {
+  objetshow1.style.display = "none";
+	fondo.style.filter = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == Objeshow1) {
+    objetshow1.style.display = "none";
+  }
+}
+
+
+var modalobj = document.getElementById("objetshow2");
+
+var obj = document.getElementById("Objshow2");
+var cierro = document.getElementsByClassName("cerrar")[0];
+var cierro = document.getElementsByClassName("Objeshow2")[0];
+obj.onclick = function() {
+  objetshow2.style.display = "block";
+	fondo.style.filter = "blur(4px)";
+}
+cierro.onclick = function() {
+  objetshow2.style.display = "none";
+	fondo.style.filter = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == Objeshow2) {
+    objetshow2.style.display = "none";
+  }
+}
+var modalobj = document.getElementById("objetshow3");
+
+var obj = document.getElementById("Objshow3");
+var cierro = document.getElementsByClassName("cerrar")[0];
+var cierro = document.getElementsByClassName("Objeshow3")[0];
+obj.onclick = function() {
+  objetshow3.style.display = "block";
+	fondo.style.filter = "blur(4px)";
+}
+cierro.onclick = function() {
+  objetshow3.style.display = "none";
+	fondo.style.filter = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == Objeshow3) {
+    objetshow3.style.display = "none";
+  }
+}
+var modalobj = document.getElementById("objetshow4");
+
+var obj = document.getElementById("Objshow4");
+var cierro = document.getElementsByClassName("cerrar")[0];
+var cierro = document.getElementsByClassName("Objeshow4")[0];
+obj.onclick = function() {
+  objetshow4.style.display = "block";
+	fondo.style.filter = "blur(4px)";
+}
+cierro.onclick = function() {
+  objetshow4.style.display = "none";
+	fondo.style.filter = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == Objeshow4) {
+    objetshow4.style.display = "none";
+  }
+}
+
+</script>
+	<script type="text/javascript">
+  $(document).ready(function () {
+
+    var box = $(".caja");
+    var mainCanvas = $(".main-canvas2");
+
+    box.draggable({
+        containment: mainCanvas,
+        helper: "clone",
+
+        start: function () {
+            $(this).css({
+                opacity: 0
+            });
+
+            $(".box").css("z-index", "0");
+        },
+
+        stop: function () {
+            $(this).css({
+                opacity: 1
+            });
+        }
+    });
+
+    box.droppable({
+        accept: box,
+
+        drop: function (event, ui) {
+            var draggable = ui.draggable;
+            var droppable = $(this);
+            var dragPos = draggable.position();
+            var dropPos = droppable.position();
+
+            console.log(droppable)
+
+
+            draggable.css({
+                left: dropPos.left + "px",
+                top: dropPos.top + "px",
+                "z-index": 20
+            });
+
+            droppable.css("z-index", 10).animate({
+                left: dragPos.left,
+                top: dragPos.top
+            });
+        }
+    });
+
+});
+
+</script>
+</body>
+</html>
