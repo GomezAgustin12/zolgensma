@@ -5,6 +5,7 @@
     <title>Documento sin título</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap"
       rel="stylesheet"
@@ -14,6 +15,9 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="sweetalert2.min.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="sweetalert2.all.min.js"></script>
   </head>
 
   <body>
@@ -108,12 +112,8 @@
         </script>
 
         <div id="cartelnombre" class="objeto">DR. NOMBRE</div>
-        <div
-          id="puertap2"
-          class="objeto"
-          onclick="window.location='pantalla2_lector.html'"
-        >
-          <button id="" role="link">
+        <div id="puertap2" class="objeto">
+          <button id="puerta-btn" role="link">
             <img src="images/transparente.png" alt="" />
           </button>
         </div>
@@ -124,6 +124,7 @@
         </div>
       </div>
     </div>
+    <script src="js/elementos.js"></script>
     <script src="js/cartera.js"></script>
     <script>
       var modal = document.getElementById("myModal");
@@ -132,6 +133,17 @@
 
       var span = document.getElementsByClassName("close")[0];
       var span = document.getElementsByClassName("modal")[0];
+
+      $("#puerta-btn").click(() => {
+        if (cartera.existe(TARJETA)) {
+          cartera.quitar(TARJETA);
+          window.location = "pantalla3.html";
+        } else {
+          Swal.fire(
+            "Necesito la tarjeta de acceso para poder acceder, estoy seguro de que lo deje en un cajón de la recepción."
+          );
+        }
+      });
 
       btn.onclick = function () {
         modal.style.display = "block";

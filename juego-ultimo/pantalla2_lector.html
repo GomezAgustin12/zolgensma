@@ -14,6 +14,9 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="sweetalert2.min.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="sweetalert2.all.min.js"></script>
   </head>
 
   <body>
@@ -134,15 +137,6 @@
       var span = document.getElementsByClassName("close")[0];
       var span = document.getElementsByClassName("modal")[0];
 
-      $("#lector-btn").click(() => {
-        if (cartera.existe(TARJETA)) {
-          cartera.quitar(TARJETA);
-          window.location = "pantalla3.html";
-        } else {
-          console.log("object");
-          $(".textos").html("Necesitas tarjeta de acceso");
-        }
-      });
 
       btn.onclick = function () {
         modal.style.display = "block";
