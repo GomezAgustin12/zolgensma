@@ -83,6 +83,9 @@ $(document).ready(function () {
           if (solPosicion4 !== planta4) return;
           puzzle.style.display = "none";
           fondo.style.filter = "none";
+          Swal.fire(
+            "Seguro que abre algo que nos permitirá conseguir la tarjeta de acceso a la oficina."
+          );
           cartera.agregar(LLAVE);
         };
 

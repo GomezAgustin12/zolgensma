@@ -110,14 +110,14 @@
           });
         </script>
 
-        <div id="abrochadora" class="objeto">
+        <!-- <div id="abrochadora" class="objeto">
           <button id=""><img src="images/abrochadora.png" alt="" /></button>
-        </div>
-        <div id="cinta" class="objeto">
+        </div> -->
+        <!-- <div id="cinta" class="objeto">
           <button id="">
             <img src="images/cinta.png" width="96" height="216" alt="" />
           </button>
-        </div>
+        </div> -->
         <div id="tarjeta" class="objeto">
           <button id=""><img src="images/tarjeta.png" alt="" /></button>
         </div>
@@ -144,8 +144,8 @@
       var span = document.getElementsByClassName("modal")[0];
 
       $("#tarjeta").click(() => cartera.agregar(TARJETA));
-      $("#abrochadora").click(() => cartera.agregar(ABROCHADORA));
-      $("#cinta").click(() => cartera.agregar(CINTA));
+      // $("#abrochadora").click(() => cartera.agregar(ABROCHADORA));
+      // $("#cinta").click(() => cartera.agregar(CINTA));
 
       btn.onclick = function () {
         modal.style.display = "block";

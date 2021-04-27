@@ -151,12 +151,12 @@
         <div id="hc3c" class="objeto historia-correcta">
           <button id=""><img src="images/fichas/hc3c.png" alt="" /></button>
         </div>
-
+        <!-- 
         <div id="exitp2puerta" class="objeto">
           <button id="" role="link" onclick="window.location='pantalla3.html'">
             <img src="images/exit.png" alt="" />
           </button>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -170,6 +170,9 @@
 
       var span = document.getElementsByClassName("close")[0];
       var span = document.getElementsByClassName("modal")[0];
+      Swal.fire(
+        "Por favor indique haciendo click sobre la historia clínica. ¿Qué paciente sería el indicado para recibir tratamiento con Zolgensma?"
+      );
 
       btn.onclick = function () {
         modal.style.display = "block";

@@ -111,34 +111,42 @@
         </script>
 
         <div id="viales">
-          <div id="vial1" class="objeto">
+          <div id="vial1" class="objeto vial">
             <button id=""><img src="images/vial.png" alt="" /></button>
           </div>
-          <div id="vial2" class="objeto">
+          <div id="vial2" class="objeto vial">
             <button id=""><img src="images/vial.png" alt="" /></button>
           </div>
-          <div id="vial3" class="objeto">
+          <div id="vial3" class="objeto vial">
             <button id=""><img src="images/vial.png" alt="" /></button>
           </div>
-          <div id="vial4" class="objeto">
+          <div id="vial4" class="objeto vial">
             <button id=""><img src="images/vial.png" alt="" /></button>
           </div>
-          <div id="vial5" class="objeto">
+          <div id="vial5" class="objeto vial">
             <button id=""><img src="images/vial.png" alt="" /></button>
           </div>
-          <div id="vial6" class="objeto">
+          <div id="vial6" class="objeto vial">
             <button id=""><img src="images/vial.png" alt="" /></button>
           </div>
         </div>
 
         <button id="btaceptar" class="boton objeto">ACEPTAR</button
-        ><button id="btreset" class="boton objeto">VOLVER A EMPEZAR</button>
+        ><button
+          id="btreset"
+          onclick="window.location = 'pantalla7_jeringa.html'"
+          class="boton objeto"
+        >
+          VOLVER A EMPEZAR
+        </button>
 
         <div id="jeringas">
           <div id="jeringa2" class="objeto">
-            <button id=""><img src="images/jeringa_vacia.png" alt="" /></button>
+            <button id="">
+              <img id="jeringa-img" src="images/jeringa_vacia.png" alt="" />
+            </button>
           </div>
-          <div id="v69" class="objeto">
+          <!-- <div id="v69" class="objeto">
             <button id=""><img src="images/jeringa_vial1.png" alt="" /></button>
           </div>
           <div id="v138" class="objeto">
@@ -155,7 +163,7 @@
           </div>
           <div id="v414" class="objeto">
             <button id=""><img src="images/jeringa_vial6.png" alt="" /></button>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -170,6 +178,19 @@
 
       var span = document.getElementsByClassName("close")[0];
       var span = document.getElementsByClassName("modal")[0];
+      let jeringa = 0;
+
+      $(".vial").click(({ currentTarget: { attributes } }) => {
+        jeringa++;
+        $(`#${attributes.id.value}`).css({ display: "none" });
+        $("#jeringa-img").attr("src", `images/jeringa_vial${jeringa}.png`);
+      });
+
+      $("#btaceptar").click(() => {
+        if (jeringa === 3) {
+          window.location = "pantalla8.html";
+        }
+      });
 
       btn.onclick = function () {
         modal.style.display = "block";
@@ -203,7 +224,7 @@
       };
 
       window.onclick = function (event) {
-        if (event.target == modobj) {
+        if (event.target == modalbj) {
           myObjet.style.display = "none";
         }
       };

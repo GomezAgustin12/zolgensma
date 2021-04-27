@@ -170,7 +170,9 @@
         if (cartera.existe(LLAVE)) {
           window.location = "pantalla2_cajon.html";
         } else {
-          $(".textos").html("Debes buscar la llave");
+          Swal.fire(
+            "He perdido la llave del cajón, seguro que se me ha caído en algún lado cerca de alguna planta."
+          );
         }
       });
 

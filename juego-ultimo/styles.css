@@ -1,30 +1,77 @@
 /* CSS Document */
-body {margin: 0px; font-family: 'Quicksand', sans-serif; font-size: 1.8vw; }
+body {
+  margin: 0px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.8vw;
+}
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-img {width: 100%; height: auto;}
+img {
+  width: 100%;
+  height: auto;
+}
 
+#content {
+  width: 100%;
+  height: 100vh;
+}
 
-#content {width: 100%; height:100vh; }
-
-.boton, .boton:focus {background: #622a6b;    color: #fff;    font-size: 0.8em;    padding: 0.4em; }
-.help {width: 7%; top: 0;   position: absolute;}
-.textos {background: #000; color: #fff; padding: 8px; margin: 0 auto; width: 50%; text-align: center;}
+.boton,
+.boton:focus {
+  background: #622a6b;
+  color: #fff;
+  font-size: 0.8em;
+  padding: 0.4em;
+}
+.help {
+  width: 7%;
+  top: 0;
+  position: absolute;
+}
+.textos {
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
 
 /*REPOSITORIO*/
-.verticalCarousel {    float: right;    width: 19%;}
-.verticalCarouselGroup.vc_list > li {background-color: none; height: 14vh;}
-.panel {background: #0000006b; width: 100%; float: right; }
-.marco {border: solid #ffffff 0.2em; height: 13vh;  width: 40%; cursor: pointer;}
-.col1 {float: left; margin: 3%;}
-.col2 {float: right; margin: 3%;}
-.objeto {position: absolute;}
-.objeto1 {background-image: url(images/matafuego.png);     background-repeat: no-repeat;    background-position: center top; background-size: contain;}
-.objeto2 {background-image: url(images/planta1.png);     background-repeat: no-repeat;    background-position: center top; background-size: contain;}
+.verticalCarousel {
+  float: right;
+  width: 19%;
+}
+.verticalCarouselGroup.vc_list > li {
+  background-color: none;
+  height: 14vh;
+}
+.panel {
+  background: #0000006b;
+  width: 100%;
+  float: right;
+}
+.marco {
+  border: solid #ffffff 0.2em;
+  height: 13vh;
+  width: 40%;
+  cursor: pointer;
+}
+.col1 {
+  float: left;
+  margin: 3%;
+}
+.col2 {
+  float: right;
+  margin: 3%;
+}
+.objeto {
+  position: absolute;
+}
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -32,11 +79,13 @@ img {width: 100%; height: auto;}
 }
 
 /* line 14, ../sass/jQuery.verticalCarousel.scss */
-.vc_goUp, .vc_goDown {
+.vc_goUp,
+.vc_goDown {
   display: block;
 }
 /* line 16, ../sass/jQuery.verticalCarousel.scss */
-.vc_goUp.isDisabled, .vc_goDown.isDisabled {
+.vc_goUp.isDisabled,
+.vc_goDown.isDisabled {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   opacity: 0.3;
   cursor: not-allowed;
@@ -65,7 +114,6 @@ img {width: 100%; height: auto;}
 .verticalCarousel {
   margin: 50px auto;
   max-width: 500px;
-
 }
 
 /* line 24, ../sass/style.scss */
@@ -85,10 +133,11 @@ img {width: 100%; height: auto;}
 .verticalCarouselHeader h3 {
   float: left;
   margin: 0px;
-	font-size: 0.5em;
+  font-size: 0.5em;
 }
 /* line 36, ../sass/style.scss */
-.verticalCarouselHeader .vc_goUp, .verticalCarouselHeader .vc_goDown {
+.verticalCarouselHeader .vc_goUp,
+.verticalCarouselHeader .vc_goDown {
   float: right;
   display: block;
   width: 25px;
@@ -97,10 +146,11 @@ img {width: 100%; height: auto;}
   text-align: center;
   color: #000;
   margin-left: 5px;
-	font-size: 0.5em;
+  font-size: 0.5em;
 }
 /* line 45, ../sass/style.scss */
-.verticalCarouselHeader .vc_goUp:active, .verticalCarouselHeader .vc_goDown:active {
+.verticalCarouselHeader .vc_goUp:active,
+.verticalCarouselHeader .vc_goDown:active {
   -moz-transform: scale(0.7, 0.7);
   -ms-transform: scale(0.7, 0.7);
   -webkit-transform: scale(0.7, 0.7);
@@ -111,7 +161,7 @@ img {width: 100%; height: auto;}
 .verticalCarouselGroup.vc_list > li {
   margin: 15px;
   border-width: 0px;
-  
+
   -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
@@ -125,401 +175,1122 @@ img {width: 100%; height: auto;}
   margin: 0px 0px 0px;
 }
 
-
 /*PANTALLA 2 HALL*/
-.pantalla2 {background-image: url(images/hall_hospital.jpg); background-size: cover; background-repeat: no-repeat;}
-#matafuego {  margin-top: 16%;  width: 5%;    margin-left: 0.5%;}
-#planta1 {  bottom: 0;    width: 9%;    margin-left: 0.5%; z-index: 1}
-#planta2 {    margin-left: 26%;    margin-top: 26%;    width: 8%; z-index: 1 }
-#planta3 {   margin-left: 58.2%;    margin-top: 22.5%;    width: 5%; z-index: 1}
-#planta4 {    margin-left: 69.2%;   margin-top: 31.5%;    width: 5%; z-index: 1}
-#cuadro1 {margin-left: 6.5%;   margin-top: 17%; width: 3.7%;}
-#cuadro2 {margin-left: 6.5%;   margin-top: 22.5%; width: 3.7%;}
-#cuadro3 {margin-left: 64%;    margin-top: 21.5%;    width: 3%;}
-#cartel {margin-left: 25.5%;   margin-top: 23%;   width: 2%;}
-#cajonp2 {  margin-left: 36.5%;    margin-top: 25%;    width: 16%;}
-#flechap2 {margin-left: 14.5%;    margin-top: 23%;    width: 4%;}
-#planta1OK {     margin-left: 25.2%;    margin-top: 27.5%;    width: 8%;    height: 24%;}
-#planta2OK {height: 34%;       margin-top: 30%;    width: 10%;    margin-left: 0.8%;}
-#planta3OK {        margin-left: 68.7%;    margin-top: 32.5%;    width: 5%;    height: 8%;}
-#planta4OK {    margin-left: 58.3%;    margin-top: 20.8%;    width: 4.1%;    height: 13%;}
-#llave {width: 2%;    margin-left: 28.2%;    margin-top: 31%;}
+.pantalla2 {
+  background-image: url(images/hall_hospital.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#matafuego {
+  margin-top: 16%;
+  width: 5%;
+  margin-left: 0.5%;
+}
+#planta1 {
+  bottom: 0;
+  width: 9%;
+  margin-left: 0.5%;
+  z-index: 1;
+}
+#planta2 {
+  margin-left: 26%;
+  margin-top: 26%;
+  width: 8%;
+  z-index: 1;
+}
+#planta3 {
+  margin-left: 58.2%;
+  margin-top: 22.5%;
+  width: 5%;
+  z-index: 1;
+}
+#planta4 {
+  margin-left: 69.2%;
+  margin-top: 31.5%;
+  width: 5%;
+  z-index: 1;
+}
+#cuadro1 {
+  margin-left: 6.5%;
+  margin-top: 17%;
+  width: 3.7%;
+}
+#cuadro2 {
+  margin-left: 6.5%;
+  margin-top: 22.5%;
+  width: 3.7%;
+}
+#cuadro3 {
+  margin-left: 64%;
+  margin-top: 21.5%;
+  width: 3%;
+}
+#cartel {
+  margin-left: 25.5%;
+  margin-top: 23%;
+  width: 2%;
+}
+#cajonp2 {
+  margin-left: 36.5%;
+  margin-top: 25%;
+  width: 16%;
+}
+#flechap2 {
+  margin-left: 14.5%;
+  margin-top: 23%;
+  width: 4%;
+}
+#planta1OK {
+  margin-left: 25.2%;
+  margin-top: 27.5%;
+  width: 8%;
+  height: 24%;
+}
+#planta2OK {
+  height: 34%;
+  margin-top: 30%;
+  width: 10%;
+  margin-left: 0.8%;
+}
+#planta3OK {
+  margin-left: 68.7%;
+  margin-top: 32.5%;
+  width: 5%;
+  height: 8%;
+}
+#planta4OK {
+  margin-left: 58.3%;
+  margin-top: 20.8%;
+  width: 4.1%;
+  height: 13%;
+}
+#llave {
+  width: 2%;
+  margin-left: 28.2%;
+  margin-top: 31%;
+}
 
 /*PANTALLA 2 PUERTA*/
-.pantalla2puerta {background-image: url("images/puerta_consultorio.jpg"); background-size: cover; background-repeat: no-repeat;}
-#cartelnombre {    margin-left: 42%;   margin-top: 13.5%;    width: 16.5%;    text-align: center;}
-#puertap2 {    margin-left: 43.5%;    margin-top: 26%;}
-#exitp2puerta  {    margin-left: 50%;    margin-top: 39%;}
+.pantalla2puerta {
+  background-image: url("images/puerta_consultorio.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#cartelnombre {
+  margin-left: 42%;
+  margin-top: 13.5%;
+  width: 16.5%;
+  text-align: center;
+}
+#puertap2 {
+  margin-left: 43.5%;
+  margin-top: 26%;
+}
+#exitp2puerta {
+  margin-left: 50%;
+  margin-top: 39%;
+}
 
 /*PANTALLA 2 LECTOR*/
-.pantalla2lector {background-image: url("images/pantalla2_lector.jpg"); background-size: cover; background-repeat: no-repeat;}
-#lector { margin-left: 37%;    margin-top: 1%;}
+.pantalla2lector {
+  background-image: url("images/pantalla2_lector.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#lector {
+  margin-left: 37%;
+  margin-top: 1%;
+}
 /*PANTALLA 2 CAJON CERRADO*/
-.pantalla2cajoncerrado {background-image: url("images/recepcion_cajon_cerrado.jpg"); background-size: cover; background-repeat: no-repeat;}
-#p2cajon {      margin-left: 60%;    margin-top: 8%;    width: 20.5%;}
-
-
+.pantalla2cajoncerrado {
+  background-image: url("images/recepcion_cajon_cerrado.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#p2cajon {
+  margin-left: 60%;
+  margin-top: 8%;
+  width: 20.5%;
+}
 
 /*PANTALLA 2 CAJON*/
-.pantalla2cajon {background-image: url(images/cajon_abierto.jpg); background-size: cover; background-repeat: no-repeat;}
-#cinta {     margin-top: 11%;  width: 11%;    margin-left: 30%;}
-#abrochadora {  margin-left: 25%;    margin-top: 13%; width: 24%;}
-#tarjeta {    margin-left: 50%;    margin-top: 11%;    width: 21%; }
-#tarjetas {    margin-left: 57%;    margin-top: 11%;    width: 23%; }
-#exitp2cajon  {    margin-left: 50%;    margin-top: 34%;    width: 23%; }
+.pantalla2cajon {
+  background-image: url(images/cajon_abierto.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#cinta {
+  margin-top: 11%;
+  width: 11%;
+  margin-left: 30%;
+}
+#abrochadora {
+  margin-left: 25%;
+  margin-top: 13%;
+  width: 24%;
+}
+#tarjeta {
+  margin-left: 50%;
+  margin-top: 11%;
+  width: 21%;
+}
+#tarjetas {
+  margin-left: 57%;
+  margin-top: 11%;
+  width: 23%;
+}
+#exitp2cajon {
+  margin-left: 50%;
+  margin-top: 34%;
+  width: 23%;
+}
 
 /*PANTALLA 3 HALL*/
-.pantalla3 {background-image: url(images/consultorio_medico.jpg); background-size: cover; background-repeat: no-repeat;}
-#cuadro5 {     margin-top: 0%;    width: 10%;    margin-left: 6.5%;}
-#visor {  bottom: 63%;    width: 8%;    margin-left: 57%;}
-#escritorio {margin-left: 27%;    margin-top: 19%;    width: 9%;}
-#cajon {    margin-left: 55%;    margin-top: 18.2%;    width: 5%;}
-#archivo {    margin-left: 66.5%;    margin-top: 9%;    width: 3.7%;}
-#camilla {margin-left: 72.5%;    margin-top: 23.5%;    width: 12.7%;}
-#planta5 {    margin-left: 41%;    margin-top: 19.5%;    width: 6%;}
-#compu {    bottom: 48%;    width: 8%;    margin-left: 18%;}
+.pantalla3 {
+  background-image: url(images/consultorio_medico.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#cuadro5 {
+  margin-top: 0%;
+  width: 10%;
+  margin-left: 6.5%;
+}
+#visor {
+  bottom: 63%;
+  width: 8%;
+  margin-left: 57%;
+}
+#escritorio {
+  margin-left: 27%;
+  margin-top: 19%;
+  width: 9%;
+}
+#cajon {
+  margin-left: 55%;
+  margin-top: 18.2%;
+  width: 5%;
+}
+#archivo {
+  margin-left: 66.5%;
+  margin-top: 9%;
+  width: 3.7%;
+}
+#camilla {
+  margin-left: 72.5%;
+  margin-top: 23.5%;
+  width: 12.7%;
+}
+#planta5 {
+  margin-left: 41%;
+  margin-top: 19.5%;
+  width: 6%;
+}
+#compu {
+  bottom: 48%;
+  width: 8%;
+  margin-left: 18%;
+}
 
 /*PANTALLA 3 ESCRITORIO*/
-.pantalla3escritorio {background-image: url(images/escritorio_consultorio.jpg); background-size: cover; background-repeat: no-repeat;}
-#hc1a {     margin-top: 5%;    width: 21%;   margin-left: 11.5%;}
-#hc1b {    margin-left: 11.5%;   margin-top: 19%;    width: 21%;}
-#hc1c { margin-left: 11.5%;       margin-top: 28.46%;   width: 21%;}
-#hc2a {   margin-left: 34%;    margin-top: 5%;    width: 21%;}
-#hc2b {   margin-left: 34%;    margin-top: 18.88%;    width: 21%;}
-#hc2c { margin-left: 34%;   margin-top: 28.32%;    width: 21%;}
-#hc3a {    margin-top: 5%;    width: 21%;    margin-left: 57%;  }
-#hc3b {     margin-left: 57%;   margin-top: 19.1%;    width: 21%;}
-#hc3c {     margin-left: 57%;    margin-top: 28.5%;    width: 21%;}
-#carpetabierta {     margin-top: 0%;    width: 61%;    margin-left: 12%;}
-#hc1bOK {   margin-left: 11.5%;   margin-top: 19%;    width: 21%; height: 18.7%;}
-#hc2bOK  {   margin-left: 34%;    margin-top: 18.88%;    width: 21%; height: 18.7%; }
-#hc3bOK {   margin-left: 57%;   margin-top: 19.1%;    width: 21%;  height: 18.7%;}
-#hc1cOK {   margin-left: 11.5%;       margin-top: 28.46%;   width: 21%;height: 18%;}
-#hc2cOK  {   margin-left: 34%;   margin-top: 28.32%;    width: 21%; height: 18%; }
-#hc3cOK {  margin-left: 57%;    margin-top: 28.5%;    width: 21%; height: 18%; }
+.pantalla3escritorio {
+  background-image: url(images/escritorio_consultorio.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#hc1a {
+  margin-top: 5%;
+  width: 21%;
+  margin-left: 11.5%;
+}
+#hc1b {
+  margin-left: 11.5%;
+  margin-top: 19%;
+  width: 21%;
+}
+#hc1c {
+  margin-left: 11.5%;
+  margin-top: 28.46%;
+  width: 21%;
+}
+#hc2a {
+  margin-left: 34%;
+  margin-top: 5%;
+  width: 21%;
+}
+#hc2b {
+  margin-left: 34%;
+  margin-top: 18.88%;
+  width: 21%;
+}
+#hc2c {
+  margin-left: 34%;
+  margin-top: 28.32%;
+  width: 21%;
+}
+#hc3a {
+  margin-top: 5%;
+  width: 21%;
+  margin-left: 57%;
+}
+#hc3b {
+  margin-left: 57%;
+  margin-top: 19.1%;
+  width: 21%;
+}
+#hc3c {
+  margin-left: 57%;
+  margin-top: 28.5%;
+  width: 21%;
+}
+#carpetabierta {
+  margin-top: 0%;
+  width: 61%;
+  margin-left: 12%;
+}
+#hc1bOK {
+  margin-left: 11.5%;
+  margin-top: 19%;
+  width: 21%;
+  height: 18.7%;
+}
+#hc2bOK {
+  margin-left: 34%;
+  margin-top: 18.88%;
+  width: 21%;
+  height: 18.7%;
+}
+#hc3bOK {
+  margin-left: 57%;
+  margin-top: 19.1%;
+  width: 21%;
+  height: 18.7%;
+}
+#hc1cOK {
+  margin-left: 11.5%;
+  margin-top: 28.46%;
+  width: 21%;
+  height: 18%;
+}
+#hc2cOK {
+  margin-left: 34%;
+  margin-top: 28.32%;
+  width: 21%;
+  height: 18%;
+}
+#hc3cOK {
+  margin-left: 57%;
+  margin-top: 28.5%;
+  width: 21%;
+  height: 18%;
+}
 
 /*PANTALLA 3 CARPETA*/
-.pantalla3carpeta {background-image: url(images/escritorio_consultorio.jpg); background-size: cover; background-repeat: no-repeat;}
-#carpeta { margin-top: 0%;    width: 39%;    margin-left: 24.5%;}
-
+.pantalla3carpeta {
+  background-image: url(images/escritorio_consultorio.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#carpeta {
+  margin-top: 0%;
+  width: 39%;
+  margin-left: 24.5%;
+}
 
 /*PANTALLA 3 ZOOMS*/
-.pantalla3hc1b {background-image: url(images/hc1b.jpg); background-size: cover; background-repeat: no-repeat;}
-.pantalla3hc1c {background-image: url(images/hc1c.jpg); background-size: cover; background-repeat: no-repeat;}
-.pantalla3hc2b {background-image: url(images/hc2b.jpg); background-size: cover; background-repeat: no-repeat;}
-.pantalla3hc2c {background-image: url(images/hc2c.jpg); background-size: cover; background-repeat: no-repeat;}
-.pantalla3hc3b {background-image: url(images/hc3b.jpg); background-size: cover; background-repeat: no-repeat;}
-.pantalla3hc3c {background-image: url(images/hc3c.jpg); background-size: cover; background-repeat: no-repeat;}
+.pantalla3hc1b {
+  background-image: url(images/hc1b.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pantalla3hc1c {
+  background-image: url(images/hc1c.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pantalla3hc2b {
+  background-image: url(images/hc2b.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pantalla3hc2c {
+  background-image: url(images/hc2c.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pantalla3hc3b {
+  background-image: url(images/hc3b.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pantalla3hc3c {
+  background-image: url(images/hc3c.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-#teclado {     width: 54%;    margin-top: 23%;    margin-left: 26%;}
-#ficha1b {    width: 24%;   margin-top: 28%;    margin-left: 42%;}
-#p3cuadro {width: 23%;    margin-left: 12%;    margin-top: 0;}
-#ficha1c {    width: 18%;    margin-top: 11%;    margin-left: 15%;}
-#botiquin {width: 24%;    margin-left: 48%;    margin-top: 1%;}
-#ficha2b {width: 18%;     margin-left: 50%;    margin-top: 4%;}
-#plantavista {    width: 34%;    margin-top: 5%;}
-#ficha2c {    margin-top: 18%;    width: 18%;    margin-left: 8%;}
-#p3visor {    width: 27%;    margin-left: 37%;    margin-top: 2%;}
-#ficha3b {width: 18%;    margin-left: 41%;    margin-top: 13%;}
-#almohada {    width: 30%;    margin-left: 51%;    margin-top: 15%;}
-#ficha3c {width: 18%;    margin-left: 57%;    margin-top: 19%;}
+#teclado {
+  width: 54%;
+  margin-top: 23%;
+  margin-left: 26%;
+}
+#ficha1b {
+  width: 24%;
+  margin-top: 28%;
+  margin-left: 42%;
+}
+#p3cuadro {
+  width: 23%;
+  margin-left: 12%;
+  margin-top: 0;
+}
+#ficha1c {
+  width: 18%;
+  margin-top: 11%;
+  margin-left: 15%;
+}
+#botiquin {
+  width: 24%;
+  margin-left: 48%;
+  margin-top: 1%;
+}
+#ficha2b {
+  width: 18%;
+  margin-left: 50%;
+  margin-top: 4%;
+}
+#plantavista {
+  width: 34%;
+  margin-top: 5%;
+}
+#ficha2c {
+  margin-top: 18%;
+  width: 18%;
+  margin-left: 8%;
+}
+#p3visor {
+  width: 27%;
+  margin-left: 37%;
+  margin-top: 2%;
+}
+#ficha3b {
+  width: 18%;
+  margin-left: 41%;
+  margin-top: 13%;
+}
+#almohada {
+  width: 30%;
+  margin-left: 51%;
+  margin-top: 15%;
+}
+#ficha3c {
+  width: 18%;
+  margin-left: 57%;
+  margin-top: 19%;
+}
 
 /*PANTALLA 4*/
-.pantalla4 {background-image: url(images/pantalla4.jpg); background-size: cover; background-repeat: no-repeat;}
-
+.pantalla4 {
+  background-image: url(images/pantalla4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 /*PANTALLA 5 FARMACIA*/
-.pantalla5farmacia {background-image: url("images/interior_farmacia.jpg"); background-size: cover; background-repeat: no-repeat;}
-#cajonerap5 {   margin-top: 32%;    width: 20%;    margin-left: 41%;}
-#medicamentos {      margin-top: 0%;    width: 18%;    margin-left: 25%;}
-
+.pantalla5farmacia {
+  background-image: url("images/interior_farmacia.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#cajonerap5 {
+  margin-top: 32%;
+  width: 20%;
+  margin-left: 41%;
+}
+#medicamentos {
+  margin-top: 0%;
+  width: 18%;
+  margin-left: 25%;
+}
 
 /*PANTALLA 5 MEDICAMENTOS*/
-.pantalla5medicamentos {background-image: url("images/medicamentos.jpg"); background-size: cover; background-repeat: no-repeat;}
-#heladerap5 {   margin-top: 32%;    width: 20%;    margin-left: 41%;}
-.puzzleheladeras {background-image: url("images/pantalla5_heladera1.jpg"); background-size: cover; background-repeat: no-repeat;}
-
+.pantalla5medicamentos {
+  background-image: url("images/medicamentos.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#heladerap5 {
+  margin-top: 32%;
+  width: 20%;
+  margin-left: 41%;
+}
+.puzzleheladeras {
+  background-image: url("images/pantalla5_heladera1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 /*PANTALLA 5 HELADERAS*/
-.pantalla5heladeras {background-image: url(images/pantalla5_heladeras.jpg); background-size: cover; background-repeat: no-repeat;}
-#heladera1 {        margin-top: 1%;    width: 24%;    margin-left: 13.5%;    height: 77%;}
-#heladera2 {  margin-top: 1%; width: 24%;    margin-left: 35%;   height: 77%;}
-#heladera3 {   margin-top: 1%;  width: 24%;    margin-left: 63%;   height: 77%; }
-#heladera1 button, #heladera2 button, #heladera3 button  {height: 100%;  width: 100%;}
+.pantalla5heladeras {
+  background-image: url(images/pantalla5_heladeras.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#heladera1 {
+  margin-top: 1%;
+  width: 24%;
+  margin-left: 13.5%;
+  height: 77%;
+}
+#heladera2 {
+  margin-top: 1%;
+  width: 24%;
+  margin-left: 35%;
+  height: 77%;
+}
+#heladera3 {
+  margin-top: 1%;
+  width: 24%;
+  margin-left: 63%;
+  height: 77%;
+}
+#heladera1 button,
+#heladera2 button,
+#heladera3 button {
+  height: 100%;
+  width: 100%;
+}
 
 /*PANTALLA 5 HELADERA2*/
-.pantalla5heladera2 {background-image: url(images/pantalla5_heladera2.jpg); background-size: cover; background-repeat: no-repeat;}
-
+.pantalla5heladera2 {
+  background-image: url(images/pantalla5_heladera2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 /*PANTALLA 5 HELADERA1*/
-.pantalla5heladera1 {background-image: url(images/pantalla5_heladera1.jpg); background-size: cover; background-repeat: no-repeat;}
-
+.pantalla5heladera1 {
+  background-image: url(images/pantalla5_heladera1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 /*PANTALLA 5 HELADERA3*/
-.pantalla5heladera3 {background-image: url(images/pantalla5_heladera3.jpg); background-size: cover; background-repeat: no-repeat;}
-
+.pantalla5heladera3 {
+  background-image: url(images/pantalla5_heladera3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 /*PANTALLA 5 CAJONERA*/
-.pantalla5cajonera {background-image: url(images/cajonera.jpg); background-size: cover; background-repeat: no-repeat;}
-#cajon1p5 {    margin-top: 17%;    width: 40%;    height: 19%;    margin-left: 26.5%;}
-#cajon1p5 button {        width: 100%;    height: 96%;}
-#cajon2p5 {  margin-top: 30%;    width: 40%;    height: 19%;    margin-left: 26.5%;}
-#cajon2p5 button {        width: 100%;    height: 96%;}
+.pantalla5cajonera {
+  background-image: url(images/cajonera.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#cajon1p5 {
+  margin-top: 17%;
+  width: 40%;
+  height: 19%;
+  margin-left: 26.5%;
+}
+#cajon1p5 button {
+  width: 100%;
+  height: 96%;
+}
+#cajon2p5 {
+  margin-top: 30%;
+  width: 40%;
+  height: 19%;
+  margin-left: 26.5%;
+}
+#cajon2p5 button {
+  width: 100%;
+  height: 96%;
+}
 
 /*PANTALLA 5 CAJON1*/
-.pantalla5cajon1 {background-image: url(images/pantalla5_cajon1.jpg); background-size: cover; background-repeat: no-repeat;}
-#cajon1abiertop5 {  margin-top: 0%;    width: 61%;    height: 83%;    margin-left: 18.5%;}
-#cajon1abiertop5  button {        width: 100%;    height: 96%;}
+.pantalla5cajon1 {
+  background-image: url(images/pantalla5_cajon1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#cajon1abiertop5 {
+  margin-top: 0%;
+  width: 61%;
+  height: 83%;
+  margin-left: 18.5%;
+}
+#cajon1abiertop5 button {
+  width: 100%;
+  height: 96%;
+}
 
 /*PANTALLA 5 CAJON2*/
-.pantalla5cajon2 {background-image: url(images/pantalla5_cajon2.jpg); background-size: cover; background-repeat: no-repeat;}
+.pantalla5cajon2 {
+  background-image: url(images/pantalla5_cajon2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-#cajon2abiertop5 { margin-top: 5%;    width: 11%;    height: 19%;    margin-left: 57.5%;}
+#cajon2abiertop5 {
+  margin-top: 5%;
+  width: 11%;
+  height: 19%;
+  margin-left: 57.5%;
+}
 
 /*PANTALLA 7 GABINETE*/
-.pantalla7gabinete {background-image: url("images/gabinete_bioseguridad.jpg"); background-size: cover; background-repeat: no-repeat;}
-#gabiente {     margin-top: 13%;    width: 9%;    margin-left: 65.5%;}
-#paneljeringa {   margin-top: 10%;    width: 18%;    margin-left: 7.5%;}
+.pantalla7gabinete {
+  background-image: url("images/gabinete_bioseguridad.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#gabiente {
+  margin-top: 13%;
+  width: 9%;
+  margin-left: 65.5%;
+}
+#paneljeringa {
+  margin-top: 10%;
+  width: 18%;
+  margin-left: 7.5%;
+}
 
 /*PANTALLA 7 ESCRITORIO*/
-.pantalla7escritorio {background-image: url("images/escritorio_jeringa.jpg"); background-size: cover; background-repeat: no-repeat;}
-#jeringa {margin-top: 13%;    width: 14%;   margin-left: 61.5%;}
-#frasco1 {margin-top: 32%;    width: 6%;    margin-left: 28.5%;}
-#frasco2 {margin-top: 32%;    width: 6%;    margin-left: 38.5%;}
-#frasco3 {margin-top: 19%;    width: 6%;    margin-left: 33.5%;}
-#frasco4 {margin-top: 14%;    width: 6%;    margin-left: 45.5%;}
-#frasco5 {margin-top: 20%;    width: 6%;    margin-left: 54.5%;}
-#frasco6 {margin-top: 28%;    width: 6%;    margin-left: 47.5%;}
+.pantalla7escritorio {
+  background-image: url("images/escritorio_jeringa.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#jeringa {
+  margin-top: 13%;
+  width: 14%;
+  margin-left: 61.5%;
+}
+#frasco1 {
+  margin-top: 32%;
+  width: 6%;
+  margin-left: 28.5%;
+}
+#frasco2 {
+  margin-top: 32%;
+  width: 6%;
+  margin-left: 38.5%;
+}
+#frasco3 {
+  margin-top: 19%;
+  width: 6%;
+  margin-left: 33.5%;
+}
+#frasco4 {
+  margin-top: 14%;
+  width: 6%;
+  margin-left: 45.5%;
+}
+#frasco5 {
+  margin-top: 20%;
+  width: 6%;
+  margin-left: 54.5%;
+}
+#frasco6 {
+  margin-top: 28%;
+  width: 6%;
+  margin-left: 47.5%;
+}
 
 /*PANTALLA 7 JERINGA*/
-.pantalla7jeringa {background-image: url("images/gabinete_jeringa.jpg"); background-size: cover; background-repeat: no-repeat;}
+.pantalla7jeringa {
+  background-image: url("images/gabinete_jeringa.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-#jeringa2 {margin-top: 0;    width: 25%;    margin-left: 45%;}
-#v69 {margin-top: 0;    width: 25%;    margin-left: 45%; display: none;}
-#v138 {margin-top: 0;    width: 25%;    margin-left: 45%; display: none;}
-#v207 {margin-top: 0;    width: 25%;    margin-left: 45%; display: none;}
-#v276 {margin-top: 0;    width: 25%;    margin-left: 45%; display: none;}
-#v345 {margin-top: 0;    width: 25%;    margin-left: 45%; display: none;}
-#v414 {margin-top: 0;    width: 25%;    margin-left: 45%; display: none;}
+#jeringa2 {
+  margin-top: 0;
+  width: 25%;
+  margin-left: 45%;
+}
+#v69 {
+  margin-top: 0;
+  width: 25%;
+  margin-left: 45%;
+  display: none;
+}
+#v138 {
+  margin-top: 0;
+  width: 25%;
+  margin-left: 45%;
+  display: none;
+}
+#v207 {
+  margin-top: 0;
+  width: 25%;
+  margin-left: 45%;
+  display: none;
+}
+#v276 {
+  margin-top: 0;
+  width: 25%;
+  margin-left: 45%;
+  display: none;
+}
+#v345 {
+  margin-top: 0;
+  width: 25%;
+  margin-left: 45%;
+  display: none;
+}
+#v414 {
+  margin-top: 0;
+  width: 25%;
+  margin-left: 45%;
+  display: none;
+}
 
-#vial1 {margin-top: 4%;    width: 6%;    margin-left: 11%; }
-#vial2 {margin-top: 4%;    width: 6%;    margin-left: 23%; }
-#vial3 {margin-top: 4%;    width: 6%;    margin-left: 36%; }
-#vial4 {margin-top: 19%;    width: 6%;    margin-left: 11%; }
-#vial5 {margin-top: 19%;    width: 6%;    margin-left: 23%; }
-#vial6 {margin-top: 19%;    width: 6%;    margin-left: 36%; }
+#vial1 {
+  margin-top: 4%;
+  width: 6%;
+  margin-left: 11%;
+}
+#vial2 {
+  margin-top: 4%;
+  width: 6%;
+  margin-left: 23%;
+}
+#vial3 {
+  margin-top: 4%;
+  width: 6%;
+  margin-left: 36%;
+}
+#vial4 {
+  margin-top: 19%;
+  width: 6%;
+  margin-left: 11%;
+}
+#vial5 {
+  margin-top: 19%;
+  width: 6%;
+  margin-left: 23%;
+}
+#vial6 {
+  margin-top: 19%;
+  width: 6%;
+  margin-left: 36%;
+}
 
-#btaceptar {margin-top: 38%;    margin-left: 10%;}
-#btreset {    margin-top: 38%;    margin-left: 28%;}
+#btaceptar {
+  margin-top: 38%;
+  margin-left: 10%;
+}
+#btreset {
+  margin-top: 38%;
+  margin-left: 28%;
+}
 
 /*PANTALLA 8 PASILLO*/
-.pantalla8 {background-image: url(images/pasillo_neonatologia.jpg); background-size: cover; background-repeat: no-repeat;}
-#puertap8 {     margin-top: 11%;    width: 5%;    height: 46%;    margin-left: 55.5%;}
-#puertap8 button {height: 102%;}
-
+.pantalla8 {
+  background-image: url(images/pasillo_neonatologia.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#puertap8 {
+  margin-top: 11%;
+  width: 5%;
+  height: 46%;
+  margin-left: 55.5%;
+}
+#puertap8 button {
+  height: 102%;
+}
 
 /*PANTALLA 8 HABITACION*/
-.pantalla8habitacion {background-image: url(images/habitacion15.jpg); background-size: cover; background-repeat: no-repeat;}
-#letraz {      margin-top: 20%;    width: 7%;    margin-left: 20.5%;}
-#letran {      margin-top: 31%;    width: 8%;    margin-left: 18.5%;}
-#letrao {      margin-top: 36%;    width: 7%;    margin-left: 19.5%;}
-#letraa {      margin-top: 39%;    width: 7%;    margin-left: 45.5%;}
-#letrae {      margin-top: 11%;    width: 7%;    margin-left: 47%;}
-#letral {      margin-top: 16%;    width: 6%;    margin-left: 51%;}
-#letram {      margin-top: 28%;    width: 8%;    margin-left: 61.5%;}
-#letras {      margin-top: 29%;    width: 6%;    margin-left: 67.5%;}
-#letrag {      margin-top: 12%;    width: 6%;    margin-left: 68%;}
-
+.pantalla8habitacion {
+  background-image: url(images/habitacion15.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#letraz {
+  margin-top: 20%;
+  width: 7%;
+  margin-left: 20.5%;
+}
+#letran {
+  margin-top: 31%;
+  width: 8%;
+  margin-left: 18.5%;
+}
+#letrao {
+  margin-top: 36%;
+  width: 7%;
+  margin-left: 19.5%;
+}
+#letraa {
+  margin-top: 39%;
+  width: 7%;
+  margin-left: 45.5%;
+}
+#letrae {
+  margin-top: 11%;
+  width: 7%;
+  margin-left: 47%;
+}
+#letral {
+  margin-top: 16%;
+  width: 6%;
+  margin-left: 51%;
+}
+#letram {
+  margin-top: 28%;
+  width: 8%;
+  margin-left: 61.5%;
+}
+#letras {
+  margin-top: 29%;
+  width: 6%;
+  margin-left: 67.5%;
+}
+#letrag {
+  margin-top: 12%;
+  width: 6%;
+  margin-left: 68%;
+}
 
 /*PANTALLA 9 HABITACION*/
-.pantalla9 {background-image: url("images/habitacion_paciente.jpg"); background-size: cover; background-repeat: no-repeat;}
-#habitacionp9 {margin-top: 17%;    width: 13%;    height: 31%;    margin-left: 16.5%;}
-
+.pantalla9 {
+  background-image: url("images/habitacion_paciente.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#habitacionp9 {
+  margin-top: 17%;
+  width: 13%;
+  height: 31%;
+  margin-left: 16.5%;
+}
 
 /*PANTALLA 9 BOMBA*/
-.pantalla9 {background-image: url("images/habitacion_paciente.jpg"); background-size: cover; background-repeat: no-repeat;}
-#bomba {    margin-top: 9%;    width: 24%;   margin-left: 11.5%;}
-#numeros {     margin-top: 18%;    width: 4%;    margin-left: 16%;    color: red;    font-size: 0.7em;    text-align: center;}
-#up {   margin-top: 27%;    width: 2%;    margin-left: 17%;}
-#down {       margin-top: 30%;    width: 2%;    margin-left: 17%;}
-#btbomba { margin-top: 36%;    margin-left: 14%;}
-
+.pantalla9 {
+  background-image: url("images/habitacion_paciente.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#bomba {
+  margin-top: 9%;
+  width: 24%;
+  margin-left: 11.5%;
+}
+#numeros {
+  margin-top: 18%;
+  width: 4%;
+  margin-left: 16%;
+  color: red;
+  font-size: 0.7em;
+  text-align: center;
+}
+#up {
+  margin-top: 27%;
+  width: 2%;
+  margin-left: 17%;
+}
+#down {
+  margin-top: 30%;
+  width: 2%;
+  margin-left: 17%;
+}
+#btbomba {
+  margin-top: 36%;
+  margin-left: 14%;
+}
 
 /*PUZZLE HELADERAS*/
 
-#paracetamol {     margin-top: 3%;    width: 9%;    margin-left: 27.5%;}
-#aspirina {        margin-top: 16%;    width: 10%;    margin-left: 13.5%;}
-#ibuprofeno { margin-top: 33%;    width: 10%;    margin-left: 27.5%;}
-#amoxidal {      margin-top: 34%;    width: 8%;    margin-left: 15.5%;}
+#paracetamol {
+  margin-top: 3%;
+  width: 9%;
+  margin-left: 27.5%;
+}
+#aspirina {
+  margin-top: 16%;
+  width: 10%;
+  margin-left: 13.5%;
+}
+#ibuprofeno {
+  margin-top: 33%;
+  width: 10%;
+  margin-left: 27.5%;
+}
+#amoxidal {
+  margin-top: 34%;
+  width: 8%;
+  margin-left: 15.5%;
+}
 
+.bckpmedicamentos {
+  position: absolute;
+  margin-left: 0;
+  margin-top: 0;
+  background-image: url("images/puzzle_heladeras.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 800px;
+  height: 500px;
+}
 
-.bckpmedicamentos {position: absolute; margin-left: 0; margin-top: 0; background-image: url("images/puzzle_heladeras.jpg"); background-size: cover; background-repeat: no-repeat;  width: 800px;        height: 500px;}
+.caja1 {
+  left: 0px;
+  top: 0;
+  width: 20%;
+  height: 420px;
+}
+.caja2 {
+  left: 200px;
+  top: 0;
+  width: 20%;
+  height: 420px;
+}
+.caja3 {
+  left: 400px;
+  top: 0px;
+  width: 20%;
+  height: 420px;
+}
+.caja4 {
+  left: 600px;
+  top: 0px;
+  width: 20%;
+  height: 420px;
+}
 
- .caja1 { left: 0px; top: 0;      width: 20%;      height: 420px; }
-    .caja2 { left: 200px; top: 0;     width: 20%;        height: 420px; }
-    .caja3 { left: 400px; top: 0px;     width: 20%;       height: 420px; }
-    .caja4 {  left: 600px; top: 0px;     width: 20%;        height: 420px; }
-
-    .caja{
-      
-        position: absolute;
-        top: 5%;
-        font-size: 24px;
-        color: #ffffff;
-        line-height: 100px;
-        text-align: center;
-        cursor: move;
-    }
+.caja {
+  position: absolute;
+  top: 5%;
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 100px;
+  text-align: center;
+  cursor: move;
+}
 .main-canvas2 {
-     
-          height: 800px;
-        margin: 1% auto 0;
-        position: relative;
-    }
+  height: 800px;
+  margin: 1% auto 0;
+  position: relative;
+}
 /*PUZZLE PLANTAS*/
-        .main-canvas {
-        outline: 1px solid #dddddd;;
-        width: 600px;
-        height: 300px;
-        margin: 5% auto 0;
-        position: relative;
-    }
+.main-canvas {
+  outline: 1px solid #dddddd;
+  width: 600px;
+  height: 300px;
+  margin: 5% auto 0;
+  position: relative;
+}
 
-    .box{
-      
-        position: absolute;
-        top: 5%;
-        font-size: 24px;
-        color: #ffffff;
-        line-height: 100px;
-        text-align: center;
-        cursor: move;
-    }
-.bckp1 {position: absolute; margin-left: 0; margin-top: 0; background-image: url("images/bckp1.png"); background-size: cover; background-repeat: no-repeat;  width: 300px;        height: 300px;}
-.bckp2 {position: absolute; margin-left: 300px; margin-top: 0; background-image: url("images/bckp2.png"); background-size: cover; background-repeat: no-repeat;  width: 300px;        height: 300px;}
-.bckp3 { position: absolute; margin-left: 300px; margin-top: 300px; background-image: url("images/bckp4.png"); background-size: cover; background-repeat: no-repeat;  width: 300px;        height: 300px;}
-.bckp4 {position: absolute; margin-left: 0; margin-top: 300px; background-image: url("images/bckp3.png"); background-size: cover; background-repeat: no-repeat;  width: 300px;        height: 300px;}
-.box img {width: 100%}
+.box {
+  position: absolute;
+  top: 5%;
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 100px;
+  text-align: center;
+  cursor: move;
+}
+.bckp1 {
+  position: absolute;
+  margin-left: 0;
+  margin-top: 0;
+  background-image: url("images/bckp1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+}
+.bckp2 {
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 0;
+  background-image: url("images/bckp2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+}
+.bckp3 {
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 300px;
+  background-image: url("images/bckp4.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+}
+.bckp4 {
+  position: absolute;
+  margin-left: 0;
+  margin-top: 300px;
+  background-image: url("images/bckp3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+}
+.box img {
+  width: 100%;
+}
 
-    .box1 { left: 0; top: 0;  width: 300px;        height: 300px; }
-    .box2 { left: 300px; top: 0; width: 300px;        height: 300px; }
-    .box3 { left: 300px; top: 300px; width: 300px;        height: 300px; }
-    .box4 { left: 0; top: 300px; width: 300px;        height: 300px; }
-  
+.box1 {
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 300px;
+}
+.box2 {
+  left: 300px;
+  top: 0;
+  width: 300px;
+  height: 300px;
+}
+.box3 {
+  left: 300px;
+  top: 300px;
+  width: 300px;
+  height: 300px;
+}
+.box4 {
+  left: 0;
+  top: 300px;
+  width: 300px;
+  height: 300px;
+}
+
 .puzzle {
-  display: none; 
-  position: fixed; 
-  z-index: 999; 
-  padding-top: 5%; 
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 5%;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
-
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
-.puzzleshow { margin: 0 auto;
+.puzzleshow {
+  margin: 0 auto;
 
-   width: 50%;
-color:#fff;}
-
+  width: 50%;
+  color: #fff;
+}
 
 /*INDICACION*/
 .indicacion {
   background-color: #fff;
   margin: 0 auto;
-width: 30vw;
-    height: 53vh;
-color:#fff;
-	text-align: center;
+  width: 30vw;
+  height: 53vh;
+  color: #fff;
+  text-align: center;
 }
 
-.indicacion h3 {background: #8e239f; padding: 8px;}
-.indicacion p {color:#000;}
+.indicacion h3 {
+  background: #8e239f;
+  padding: 8px;
+}
+.indicacion p {
+  color: #000;
+}
 
-button, button:focus {background: none; padding: 0; margin: 0; border: none; cursor: pointer; outline: none;  top: 0;}
+button,
+button:focus {
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  top: 0;
+}
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 999; 
-  padding-top: 100px; 
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
-
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modobj {
   display: none;
-  position: fixed; 
-  z-index: 999; 
-  padding-top: 100px; 
+  position: fixed;
+  z-index: 999;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
-
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.Objeshow,.Objeshow1, .Objeshow2, .Objeshow3, .Objeshow4 {
-  display: none; 
-  position: fixed; 
-  z-index: 999; 
- 
+.Objeshow,
+.Objeshow1,
+.Objeshow2,
+.Objeshow3,
+.Objeshow4 {
+  display: none;
+  position: fixed;
+  z-index: 999;
+
   left: 0;
   top: 0;
-  width: 100%; 
-  
-  overflow: auto; 
-	
+  width: 100%;
 
+  overflow: auto;
 }
 
-
-.objetoshow, .objetoshow1, .objetoshow2, .objetoshow3, .objetoshow4 {
-
+.objetoshow,
+.objetoshow1,
+.objetoshow2,
+.objetoshow3,
+.objetoshow4 {
   margin: 0 auto;
   padding: 40px;
-   width: 18%;
-color:#fff;
-	text-align: center;
+  width: 18%;
+  color: #fff;
+  text-align: center;
 }
 /* Modal Content */
-#fondo
-{
-  
+#fondo {
   width: 100%;
-  height: 100vh; 
-
-
+  height: 100vh;
 }
 .modal-objeto {
   background-color: #000;
   margin: 0 auto;
   padding: 40px;
-width: 30vw;
-    height: 53vh;
-color:#fff;
-	text-align: center;
+  width: 30vw;
+  height: 53vh;
+  color: #fff;
+  text-align: center;
 }
-.modal-objeto img {width: 35%;}
+.modal-objeto img {
+  width: 35%;
+}
 
 .cerrar {
   color: #fff;
-float: right;
+  float: right;
   font-size: 48px;
   font-weight: bold;
-	margin: 0;
-	line-height: 17px;
+  margin: 0;
+  line-height: 17px;
 }
 
 .cerrar:hover,
@@ -527,25 +1298,24 @@ float: right;
   color: #fff;
   text-decoration: none;
   cursor: pointer;
-margin: 0;
-line-height: 17px;
+  margin: 0;
+  line-height: 17px;
 }
 .modal-content {
   background-color: #000;
   margin: 0 auto;
   padding: 40px;
-   width: 50%;
-color:#fff;
+  width: 50%;
+  color: #fff;
 }
-
 
 .close {
   color: #fff;
   text-align: right;
   font-size: 48px;
   font-weight: bold;
-	margin: 0;
-	line-height: 17px;
+  margin: 0;
+  line-height: 17px;
 }
 
 .close:hover,
@@ -553,6 +1323,6 @@ color:#fff;
   color: #fff;
   text-decoration: none;
   cursor: pointer;
-margin: 0;
-line-height: 17px;
+  margin: 0;
+  line-height: 17px;
 }

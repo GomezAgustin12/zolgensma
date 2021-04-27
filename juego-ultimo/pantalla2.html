@@ -84,27 +84,27 @@
       </div>
     </div>
 
-    <div id="objetshow" class="Objeshow">
+    <div id="objetshow" class="Objeshow cuadro-abierto">
       <div class="objetoshow">
         <p><img src="images/zoom/matafuego.png" alt="" /></p>
       </div>
     </div>
-    <div id="objetshow1" class="Objeshow1">
+    <div id="objetshow1" class="Objeshow1 cuadro-abierto">
       <div class="objetoshow1">
         <p><img src="images/zoom/cuadro1.png" alt="" /></p>
       </div>
     </div>
-    <div id="objetshow2" class="Objeshow2">
+    <div id="objetshow2" class="Objeshow2 cuadro-abierto">
       <div class="objetoshow2">
         <p><img src="images/zoom/cuadro2.png" alt="" /></p>
       </div>
     </div>
-    <div id="objetshow3" class="Objeshow3">
+    <div id="objetshow3" class="Objeshow3 cuadro-abierto">
       <div class="objetoshow3">
         <p><img src="images/zoom/cuadro3.png" alt="" /></p>
       </div>
     </div>
-    <div id="objetshow4" class="Objeshow4">
+    <div id="objetshow4" class="Objeshow4 cuadro-abierto">
       <div class="objetoshow4">
         <p><img src="images/zoom/cartel.png" alt="" /></p>
       </div>
@@ -264,7 +264,6 @@
         fondo.style.filter = "blur(2px)";
       });
 
-
       var span = document.getElementsByClassName("close")[0];
 
       span.onclick = function () {
@@ -273,11 +272,14 @@
       };
 
       var modal = document.getElementById("myModal");
-
       var btn = document.getElementById("myBtn");
-
       var span = document.getElementsByClassName("close")[0];
       var span = document.getElementsByClassName("modal")[0];
+
+      $(".cuadro-abierto").click(() => {
+        $(".cuadro-abierto").css({ display: "none" });
+        fondo.style.filter = "none";
+      });
 
       btn.onclick = function () {
         modal.style.display = "block";
@@ -330,17 +332,11 @@
         fondo.style.filter = "none";
       };
 
-      window.onclick = function (event) {
-        if (event.target == objetshow) {
-          objetshow.style.display = "none";
-        }
-      };
-
       var modalobj = document.getElementById("objetshow1");
 
       var obj = document.getElementById("Objshow1");
       var cierro = document.getElementsByClassName("cerrar")[0];
-      var cierro = document.getElementsByClassName("Objeshow1")[0];
+      var objeshow1 = document.getElementsByClassName("Objeshow1")[0];
       obj.onclick = function () {
         objetshow1.style.display = "block";
         fondo.style.filter = "blur(4px)";
@@ -348,12 +344,6 @@
       cierro.onclick = function () {
         objetshow1.style.display = "none";
         fondo.style.filter = "none";
-      };
-
-      window.onclick = function (event) {
-        if (event.target == Objeshow1) {
-          objetshow1.style.display = "none";
-        }
       };
 
       var modalobj = document.getElementById("objetshow2");
@@ -370,11 +360,6 @@
         fondo.style.filter = "none";
       };
 
-      window.onclick = function (event) {
-        if (event.target == objeshow2) {
-          objetshow2.style.display = "none";
-        }
-      };
       var modalobj = document.getElementById("objetshow3");
 
       var obj = document.getElementById("Objshow3");
@@ -389,11 +374,6 @@
         fondo.style.filter = "none";
       };
 
-      window.onclick = function (event) {
-        if (event.target == objeshow3) {
-          objetshow3.style.display = "none";
-        }
-      };
       var modalobj = document.getElementById("objetshow4");
 
       var obj = document.getElementById("Objshow4");
@@ -406,12 +386,6 @@
       cierro.onclick = function () {
         objetshow4.style.display = "none";
         fondo.style.filter = "none";
-      };
-
-      window.onclick = function (event) {
-        if (event.target == objeshow4) {
-          objetshow4.style.display = "none";
-        }
       };
     </script>
 
