@@ -43,7 +43,7 @@ $(document).ready(function () {
         return e === imagen;
       });
     },
-    existe: ({ imagen }) => carteraArray.includes(imagen),
+    existe: (imagen) => carteraArray.includes(imagen),
     agregar: ({ imagen, id = null }) => {
       if (cartera.existe(imagen)) return;
       if (localStorage.getItem("cartera") === null) {

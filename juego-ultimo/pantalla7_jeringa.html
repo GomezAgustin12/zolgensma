@@ -146,24 +146,6 @@
               <img id="jeringa-img" src="images/jeringa_vacia.png" alt="" />
             </button>
           </div>
-          <!-- <div id="v69" class="objeto">
-            <button id=""><img src="images/jeringa_vial1.png" alt="" /></button>
-          </div>
-          <div id="v138" class="objeto">
-            <button id=""><img src="images/jeringa_vial2.png" alt="" /></button>
-          </div>
-          <div id="v207" class="objeto">
-            <button id=""><img src="images/jeringa_vial3.png" alt="" /></button>
-          </div>
-          <div id="v276" class="objeto">
-            <button id=""><img src="images/jeringa_vial4.png" alt="" /></button>
-          </div>
-          <div id="v345" class="objeto">
-            <button id=""><img src="images/jeringa_vial5.png" alt="" /></button>
-          </div>
-          <div id="v414" class="objeto">
-            <button id=""><img src="images/jeringa_vial6.png" alt="" /></button>
-          </div> -->
         </div>
       </div>
     </div>
@@ -189,6 +171,10 @@
       $("#btaceptar").click(() => {
         if (jeringa === 3) {
           window.location = "pantalla8.html";
+        } else {
+          Swal.fire("La dosis es incorrecta.").then(
+            () => (window.location = "pantalla7_jeringa.html")
+          );
         }
       });
 

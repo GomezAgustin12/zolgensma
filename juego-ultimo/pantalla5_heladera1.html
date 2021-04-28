@@ -14,12 +14,45 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+      charset="utf-8"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+      charset="utf-8"
+    ></script>
     <link rel="stylesheet" href="sweetalert2.min.css" />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="sweetalert2.all.min.js"></script>
   </head>
 
   <body>
+    <div id="Medicinas-puzzle" class="puzzle">
+      <div class="puzzleshow">
+        <p class="close">&times;</p>
+        <!-- container -->
+        <div class="container">
+          <div class="main-canvas2">
+            <div class="bckpmedicamentos">
+              <div class="caja caja1" id="medicina1-puzzle">
+                <img src="images/amoxilina.png" alt="" />
+              </div>
+              <div class="caja caja2" id="medicina2-puzzle">
+                <img src="images/paracetamol.png" alt="" />
+              </div>
+              <div class="caja caja3" id="medicina3-puzzle">
+                <img src="images/aspirina.png" alt="" />
+              </div>
+              <div class="caja caja4" id="medicina4-puzzle">
+                <img src="images/ibuprofeno.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- container -->
+      </div>
+    </div>
     <div id="myModal" class="modal">
       <div class="modal-content">
         <p class="close">&times;</p>
@@ -39,18 +72,38 @@
     <div id="myObjet" class="modobj">
       <div class="modal-objeto">
         <span class="cerrar">&times;</span>
-        <p><img src="images/matafuegozoom.png" alt="" /></p>
+        <p><img src="images/zoom/matafuego.png" alt="" /></p>
       </div>
     </div>
 
     <div id="objetshow" class="Objeshow">
       <div class="objetoshow">
-        <p><img src="images/zolgensma.png" alt="" /></p>
+        <p><img src="images/zoom/matafuego.png" alt="" /></p>
+      </div>
+    </div>
+    <div id="objetshow1" class="Objeshow1">
+      <div class="objetoshow1">
+        <p><img src="images/zoom/cuadro1.png" alt="" /></p>
+      </div>
+    </div>
+    <div id="objetshow2" class="Objeshow2">
+      <div class="objetoshow2">
+        <p><img src="images/zoom/cuadro2.png" alt="" /></p>
+      </div>
+    </div>
+    <div id="objetshow3" class="Objeshow3">
+      <div class="objetoshow3">
+        <p><img src="images/zoom/cuadro3.png" alt="" /></p>
+      </div>
+    </div>
+    <div id="objetshow4" class="Objeshow4">
+      <div class="objetoshow4">
+        <p><img src="images/zoom/cartel.png" alt="" /></p>
       </div>
     </div>
 
     <div id="fondo">
-      <div id="content" class="pantalla5heladera1">
+      <div id="content" class="puzzleheladeras">
         <div class="textos">Se necesita médico en neonatología.</div>
         <button class="help" id="myBtn">
           <img src="images/help.png" alt="" />
@@ -75,33 +128,33 @@
               </li>
 
               <li>
-                <div class="marco objeto3 col1"></div>
-                <div class="marco objeto4 col2"></div>
+                <div class="marco objeto5 col1"></div>
+                <div class="marco objeto6 col2"></div>
               </li>
 
               <li>
-                <div class="marco objeto3 col1"></div>
-                <div class="marco objeto4 col2"></div>
+                <div class="marco objeto7 col1"></div>
+                <div class="marco objeto8 col2"></div>
               </li>
 
               <li>
-                <div class="marco objeto3 col1"></div>
-                <div class="marco objeto4 col2"></div>
+                <div class="marco objeto9 col1"></div>
+                <div class="marco objeto10 col2"></div>
               </li>
 
               <li>
-                <div class="marco objeto3 col1"></div>
-                <div class="marco objeto4 col2"></div>
+                <div class="marco objeto11 col1"></div>
+                <div class="marco objeto12 col2"></div>
               </li>
 
               <li>
-                <div class="marco objeto3 col1"></div>
-                <div class="marco objeto4 col2"></div>
+                <div class="marco objeto13 col1"></div>
+                <div class="marco objeto14 col2"></div>
               </li>
             </ul>
           </div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
         <script src="js/jQuery.verticalCarousel.js"></script>
         <script>
           $(".verticalCarousel").verticalCarousel({
@@ -110,38 +163,80 @@
           });
         </script>
 
-        <div id="heladera1" class="objeto">
+        <div id="paracetamol" class="objeto">
+          <button id="myMacetas">
+            <img src="images/transparente.png" alt="" />
+          </button>
+        </div>
+
+        <div id="aspirina" class="objeto">
+          <button id="myMacetas2">
+            <img src="images/transparente.png" alt="" />
+          </button>
+        </div>
+
+        <div id="ibuprofeno" class="objeto">
+          <button id="myMacetas3">
+            <img src="images/transparente.png" alt="" />
+          </button>
+        </div>
+
+        <div id="amoxidal" class="objeto">
+          <button id="myMacetas4">
+            <img src="images/transparente.png" alt="" />
+          </button>
+        </div>
+
+        <div id="exitp2puerta" class="objeto">
           <button
+            id=""
             role="link"
             onclick="window.location='pantalla5_heladeras.html'"
           >
-            <img src="images/transparente.png" alt="" />
-          </button>
-        </div>
-
-        <div id="heladera2" class="objeto">
-          <button
-            id=""
-            role="link"
-            onclick="window.location='pantalla5_heladera2.html'"
-          >
-            <img src="images/transparente.png" alt="" />
-          </button>
-        </div>
-
-        <div id="heladera3" class="objeto">
-          <button
-            id=""
-            role="link"
-            onclick="window.location='pantalla5_heladera3.html'"
-          >
-            <img src="images/transparente.png" alt="" />
+            <img src="images/exit.png" alt="" />
           </button>
         </div>
       </div>
     </div>
 
+    <script src="js/cartera.js"></script>
+    <script src="js/elementos.js"></script>
+
     <script>
+      var puzzle = document.getElementById("Medicinas-puzzle");
+
+      var btn = document.getElementById("myMacetas");
+      var btn2 = document.getElementById("myMacetas2");
+      var btn3 = document.getElementById("myMacetas3");
+      var btn4 = document.getElementById("myMacetas4");
+
+      var span = document.getElementsByClassName("close")[0];
+
+      btn.onclick = function () {
+        puzzle.style.display = "block";
+        fondo.style.filter = "blur(2px)";
+      };
+
+      btn2.onclick = function () {
+        puzzle.style.display = "block";
+        fondo.style.filter = "blur(2px)";
+      };
+
+      btn3.onclick = function () {
+        puzzle.style.display = "block";
+        fondo.style.filter = "blur(2px)";
+      };
+
+      btn4.onclick = function () {
+        puzzle.style.display = "block";
+        fondo.style.filter = "blur(2px)";
+      };
+
+      span.onclick = function () {
+        puzzle.style.display = "none";
+        fondo.style.filter = "none";
+      };
+
       var modal = document.getElementById("myModal");
 
       var btn = document.getElementById("myBtn");
@@ -205,6 +300,178 @@
           objetshow.style.display = "none";
         }
       };
+
+      var modalobj = document.getElementById("objetshow1");
+
+      var obj = document.getElementById("Objshow1");
+      var cierro = document.getElementsByClassName("cerrar")[0];
+      var cierro = document.getElementsByClassName("Objeshow1")[0];
+      obj.onclick = function () {
+        objetshow1.style.display = "block";
+        fondo.style.filter = "blur(4px)";
+      };
+      cierro.onclick = function () {
+        objetshow1.style.display = "none";
+        fondo.style.filter = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == Objeshow1) {
+          objetshow1.style.display = "none";
+        }
+      };
+
+      var modalobj = document.getElementById("objetshow2");
+
+      var obj = document.getElementById("Objshow2");
+      var cierro = document.getElementsByClassName("cerrar")[0];
+      var cierro = document.getElementsByClassName("Objeshow2")[0];
+      obj.onclick = function () {
+        objetshow2.style.display = "block";
+        fondo.style.filter = "blur(4px)";
+      };
+      cierro.onclick = function () {
+        objetshow2.style.display = "none";
+        fondo.style.filter = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == Objeshow2) {
+          objetshow2.style.display = "none";
+        }
+      };
+      var modalobj = document.getElementById("objetshow3");
+
+      var obj = document.getElementById("Objshow3");
+      var cierro = document.getElementsByClassName("cerrar")[0];
+      var cierro = document.getElementsByClassName("Objeshow3")[0];
+      obj.onclick = function () {
+        objetshow3.style.display = "block";
+        fondo.style.filter = "blur(4px)";
+      };
+      cierro.onclick = function () {
+        objetshow3.style.display = "none";
+        fondo.style.filter = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == Objeshow3) {
+          objetshow3.style.display = "none";
+        }
+      };
+      var modalobj = document.getElementById("objetshow4");
+
+      var obj = document.getElementById("Objshow4");
+      var cierro = document.getElementsByClassName("cerrar")[0];
+      var cierro = document.getElementsByClassName("Objeshow4")[0];
+      obj.onclick = function () {
+        objetshow4.style.display = "block";
+        fondo.style.filter = "blur(4px)";
+      };
+      cierro.onclick = function () {
+        objetshow4.style.display = "none";
+        fondo.style.filter = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == Objeshow4) {
+          objetshow4.style.display = "none";
+        }
+      };
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var box = $(".caja");
+        var mainCanvas = $(".main-canvas2");
+
+        box.draggable({
+          containment: mainCanvas,
+          helper: "clone",
+
+          start: function () {
+            $(this).css({
+              opacity: 0,
+            });
+
+            $(".caja").css("z-index", "0");
+          },
+
+          stop: function () {
+            $(this).css({
+              opacity: 1,
+            });
+          },
+        });
+
+        box.droppable({
+          accept: box,
+
+          drop: function (event, ui) {
+            var draggable = ui.draggable;
+            var droppable = $(this);
+            var dragPos = draggable.position();
+            var dropPos = droppable.position();
+
+            draggable.css({
+              left: dropPos.left + "px",
+              top: dropPos.top + "px",
+              "z-index": 20,
+            });
+
+            droppable.css("z-index", 10).animate({
+              left: dragPos.left,
+              top: dragPos.top,
+            });
+
+            let medicinasArray = [];
+
+            setTimeout(function () {
+              $(".caja").each(function () {
+                let id = $(this).attr("id");
+                if (id) {
+                  let obj = {
+                    nombre: id,
+                    left: $(this).css("left"),
+                    top: $(this).css("top"),
+                  };
+                  medicinasArray.push(obj);
+                }
+              });
+
+              const [solPosicion1, solPosicion2, solPosicion3, solPosicion4] = [
+                "medicina3-puzzle",
+                "medicina4-puzzle",
+                "medicina2-puzzle",
+                "medicina1-puzzle",
+              ];
+
+              let ordenado = medicinasArray.sort((a, b) => {
+                if (a.left < b.left) return -1;
+                if (a.left > b.left) return 1;
+              });
+              const [medicina1, medicina2, medicina3, medicina4] = ordenado.map(
+                (e) => e.nombre
+              );
+
+              verificarPuzzlePlantas = () => {
+                if (solPosicion1 !== medicina1) return;
+                if (solPosicion2 !== medicina2) return;
+                if (solPosicion3 !== medicina3) return;
+                if (solPosicion4 !== medicina4) return;
+                puzzle.style.display = "none";
+                fondo.style.filter = "none";
+                Swal.fire("He encontrado el zolgensma.").then(
+                  () => (window.location = "pantalla5_farmacia.html")
+                );
+
+                cartera.agregar(ZOLGENSMA);
+              };
+
+              verificarPuzzlePlantas();
+            }, 500);
+          },
+        });
+      });
     </script>
   </body>
 </html>
