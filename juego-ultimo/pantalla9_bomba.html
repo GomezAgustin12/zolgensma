@@ -130,11 +130,7 @@
         <button id="btbomba" class="boton objeto">ACEPTAR</button>
 
         <div id="exitp2puerta" class="objeto">
-          <button
-            id=""
-            role="link"
-            onclick="window.location='pantalla5_farmacia.html'"
-          >
+          <button id="" role="link" onclick="window.location='pantalla9.html'">
             <img src="images/exit.png" alt="" />
           </button>
         </div>
@@ -147,7 +143,6 @@
     <script type="text/javascript">
       var valor = 5;
       function bomba(boton) {
-        var contador = document.getElementById("contador").value;
         if (boton.value == "aumentar") {
           valor++;
         } else {
@@ -155,6 +150,16 @@
         }
         document.getElementById("contador").textContent = valor;
       }
+
+      $("#btbomba").click(() => {
+        if ($("#contador").html() == 60) {
+          window.location = "pantalla10.html";
+        } else {
+          Swal.fire("Intentelo de nuevo").then(
+            () => (window.location = "pantalla9_bomba.html")
+          );
+        }
+      });
     </script>
 
     <script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Documento sin título</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="sweetalert2.min.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="sweetalert2.all.min.js"></script>
+  </head>
+  <body>
+    <div class="controles1-quiz">
+      <h3>
+        1- ¿Cuánto tiempo después de la infusión deberá controlar a su paciente?
+      </h3>
+      <button id="opcion1">opcion1</button>
+      <button id="opcion2">opcion2</button>
+      <button id="opcion3" class="correcta-quiz1">opcion3</button>
+    </div>
+    <div class="controles2-quiz">
+      <h3>2- ¿Qué controles se deberían realizar?</h3>
+      <button id="opcion1" class="correcta-quiz2">opcion1</button>
+      <button id="opcion2">opcion2</button>
+      <button id="opcion3">opcion3</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jQuery.verticalCarousel.js"></script>
+    <script>
+      $(".controles2-quiz").css({ display: "none" });
+
+      $(".correcta-quiz1").click(() => {
+        $(".controles1-quiz").css({ display: "none" });
+        $(".controles2-quiz").css({ display: "block" });
+      });
+      $(".correcta-quiz2").click(() => (window.location = "pantalla11.html"));
+    </script>
+  </body>
+</html>

@@ -51,7 +51,7 @@
 
     <div id="fondo">
       <div id="content" class="pantalla8habitacion">
-        <div class="textos">Se necesita médico en neonatología.</div>
+        <div class="textos">Debo acceder a la habitación 15.</div>
         <button class="help" id="myBtn">
           <img src="images/help.png" alt="" />
         </button>
@@ -111,31 +111,49 @@
         </script>
 
         <div id="letraz" class="objeto">
-          <button id=""><img src="images/z.png" alt="" /></button>
+          <button id="">
+            <img src="images/z.png" data-id="letraz" class="letra" alt="" />
+          </button>
         </div>
         <div id="letrao" class="objeto">
-          <button id=""><img src="images/o.png" alt="" /></button>
+          <button id="">
+            <img src="images/o.png" data-id="letrao" class="letra" alt="" />
+          </button>
         </div>
         <div id="letran" class="objeto">
-          <button id=""><img src="images/n.png" alt="" /></button>
+          <button id="">
+            <img src="images/n.png" data-id="letran" class="letra" alt="" />
+          </button>
         </div>
         <div id="letraa" class="objeto">
-          <button id=""><img src="images/a.png" alt="" /></button>
+          <button id="">
+            <img src="images/a.png" data-id="letraa" class="letra" alt="" />
+          </button>
         </div>
         <div id="letral" class="objeto">
-          <button id=""><img src="images/l.png" alt="" /></button>
+          <button id="">
+            <img src="images/l.png" data-id="letral" class="letra" alt="" />
+          </button>
         </div>
         <div id="letrae" class="objeto">
-          <button id=""><img src="images/e.png" alt="" /></button>
+          <button id="">
+            <img src="images/e.png" data-id="letrae" class="letra" alt="" />
+          </button>
         </div>
         <div id="letram" class="objeto">
-          <button id=""><img src="images/m.png" alt="" /></button>
+          <button id="">
+            <img src="images/m.png" data-id="letram" class="letra" alt="" />
+          </button>
         </div>
         <div id="letras" class="objeto">
-          <button id=""><img src="images/s.png" alt="" /></button>
+          <button id="">
+            <img src="images/s.png" data-id="letras" class="letra" alt="" />
+          </button>
         </div>
         <div id="letrag" class="objeto">
-          <button id=""><img src="images/g.png" alt="" /></button>
+          <button id="">
+            <img src="images/g.png" data-id="letraz" class="letra" alt="" />
+          </button>
         </div>
       </div>
     </div>
@@ -150,6 +168,16 @@
 
       var span = document.getElementsByClassName("close")[0];
       var span = document.getElementsByClassName("modal")[0];
+
+      $("#letraz").click(() => cartera.agregar(LETRA_Z));
+      $("#letrao").click(() => cartera.agregar(LETRA_O));
+      $("#letral").click(() => cartera.agregar(LETRA_L));
+      $("#letrag").click(() => cartera.agregar(LETRA_G));
+      $("#letrae").click(() => cartera.agregar(LETRA_E));
+      $("#letran").click(() => cartera.agregar(LETRA_N));
+      $("#letras").click(() => cartera.agregar(LETRA_S));
+      $("#letram").click(() => cartera.agregar(LETRA_M));
+      $("#letraa").click(() => cartera.agregar(LETRA_A));
 
       btn.onclick = function () {
         modal.style.display = "block";
