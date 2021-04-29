@@ -35,7 +35,7 @@
         </p>
       </div>
     </div>
-    <!-- 
+    <!--
     <div id="myObjet" class="modobj">
       <div class="modal-objeto">
         <span class="cerrar">&times;</span>
@@ -157,16 +157,23 @@
 
       $("#carpeta-btn").click(() => {
         const verificarHistoriasClinicas = () => {
-          if (!cartera.existe(FICHA1B)) return false;
-          if (!cartera.existe(FICHA2B)) return false;
-          if (!cartera.existe(FICHA3B)) return false;
-          if (!cartera.existe(FICHA1C)) return false;
-          if (!cartera.existe(FICHA2C)) return false;
-          if (!cartera.existe(FICHA3C)) return false;
+          if (!cartera.existe(FICHA1B.imagen)) return false;
+          if (!cartera.existe(FICHA2B.imagen)) return false;
+          if (!cartera.existe(FICHA3B.imagen)) return false;
+          if (!cartera.existe(FICHA1C.imagen)) return false;
+          if (!cartera.existe(FICHA2C.imagen)) return false;
+          if (!cartera.existe(FICHA3C.imagen)) return false;
           return true;
         };
 
         if (verificarHistoriasClinicas()) {
+          cartera.quitar(FICHA1B.imagen);
+          cartera.quitar(FICHA2B.imagen);
+          cartera.quitar(FICHA3B.imagen);
+          cartera.quitar(FICHA1C.imagen);
+          cartera.quitar(FICHA2C.imagen);
+          cartera.quitar(FICHA3C.imagen);
+
           cartera.quitar(FICHA1B);
           cartera.quitar(FICHA2B);
           cartera.quitar(FICHA3B);

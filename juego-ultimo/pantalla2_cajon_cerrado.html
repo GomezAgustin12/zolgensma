@@ -167,7 +167,8 @@
       };
 
       $("#cajon-cerrado-btn").click(() => {
-        if (cartera.existe(LLAVE)) {
+
+        if (cartera.existe(LLAVE.imagen)) {
           window.location = "pantalla2_cajon.html";
         } else {
           Swal.fire(
@@ -176,13 +177,15 @@
         }
       });
 
+
+
+      var modalobj = document.getElementById("objetshow");
+
       window.onclick = function (event) {
-        if (event.target == modobj) {
+        if (event.target == modalobj) {
           myObjet.style.display = "none";
         }
       };
-
-      var modalobj = document.getElementById("objetshow");
 
       var obj = document.getElementById("Objshow");
       var cierro = document.getElementsByClassName("cerrar")[0];

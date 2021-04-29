@@ -2,8 +2,16 @@ $(document).ready(function () {
   if (localStorage.getItem("cartera") === null) {
     var carteraArray = [];
   } else {
-    var carteraArray = localStorage.getItem("cartera").split(", ");
-  }
+    if (localStorage.getItem("cartera")) {
+    if (!localStorage.getItem("cartera").includes(',')) {
+      var carteraArray = [localStorage.getItem("cartera")]
+
+      console.log(carteraArray);
+    } else {
+      var carteraArray = localStorage.getItem("cartera").split(", ");
+    }
+
+  } }
 
   cartera = {
     actualizar: () => {
@@ -23,10 +31,19 @@ $(document).ready(function () {
           "background-size": "contain",
         });
       });
+      var displayNoneList = [];
+      if (localStorage.getItem("displayNoneList")) {
+        if (!localStorage.getItem("displayNoneList").includes(',')) {
+          var displayNoneList = [localStorage.getItem("displayNoneList")];
+        } else {
+           var displayNoneList = localStorage.getItem("displayNoneList").split(", ");
+        }
+      }
 
-      var displayNoneList = localStorage.getItem("displayNoneList").split(", ");
+
 
       displayNoneList.forEach((e) => {
+        console.log(e)
         $(`#${e}`).css({ display: "none" });
       });
     },
@@ -43,7 +60,9 @@ $(document).ready(function () {
         return e === imagen;
       });
     },
-    existe: (imagen) => carteraArray.includes(imagen),
+    existe: (imagen) => {
+      return carteraArray.includes(imagen)
+    },
     agregar: ({ imagen, id = null }) => {
       if (cartera.existe(imagen)) return;
       if (localStorage.getItem("cartera") === null) {
