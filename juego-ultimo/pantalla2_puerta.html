@@ -118,14 +118,16 @@
           </button>
         </div>
         <div id="exitp2puerta" class="objeto">
-          <button id="" role="link" onclick="window.location='pantalla2.html'">
+          <button id="" role="link" onclick="onScreenChange('pantalla2.html')">
             <img src="images/exit.png" alt="" />
           </button>
         </div>
       </div>
+      <p class="timer"></p>
     </div>
     <script src="js/elementos.js"></script>
     <script src="js/cartera.js"></script>
+
     <script>
       var modal = document.getElementById("myModal");
 
@@ -138,7 +140,7 @@
         if (cartera.existe(TARJETA.imagen) || cartera.existe(TARJETA)) {
           cartera.quitar(TARJETA.imagen);
           cartera.quitar(TARJETA);
-          window.location = "pantalla3.html";
+          onScreenChange("pantalla3.html");
         } else {
           Swal.fire(
             "Necesito la tarjeta de acceso para poder acceder, estoy seguro de que lo deje en un cajón de la recepción."

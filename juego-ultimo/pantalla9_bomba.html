@@ -130,11 +130,12 @@
         <button id="btbomba" class="boton objeto">ACEPTAR</button>
 
         <div id="exitp2puerta" class="objeto">
-          <button id="" role="link" onclick="window.location='pantalla9.html'">
+          <button id="" role="link" onclick="onScreenChange('pantalla9.html')">
             <img src="images/exit.png" alt="" />
           </button>
         </div>
       </div>
+      <p class="timer"></p>
     </div>
 
     <script src="js/cartera.js"></script>
@@ -153,10 +154,10 @@
 
       $("#btbomba").click(() => {
         if ($("#contador").html() == 60) {
-          window.location = "pantalla10.html";
+          onScreenChange("pantalla10.html");
         } else {
-          Swal.fire("Intentelo de nuevo").then(
-            () => (window.location = "pantalla9_bomba.html")
+          Swal.fire("Intentelo de nuevo").then(() =>
+            onScreenChange("pantalla9_bomba.html")
           );
         }
       });

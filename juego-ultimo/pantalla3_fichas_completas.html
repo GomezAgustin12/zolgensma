@@ -151,13 +151,8 @@
         <div id="hc3c" class="objeto historia-correcta">
           <button id=""><img src="images/fichas/hc3c.png" alt="" /></button>
         </div>
-        <!-- 
-        <div id="exitp2puerta" class="objeto">
-          <button id="" role="link" onclick="window.location='pantalla3.html'">
-            <img src="images/exit.png" alt="" />
-          </button>
-        </div> -->
       </div>
+      <p class="timer"></p>
     </div>
 
     <script src="js/cartera.js"></script>
@@ -195,8 +190,8 @@
       var cierro = document.getElementsByClassName("cerrar")[0];
       var cierro = document.getElementsByClassName("modobj")[0];
 
-      $(".historia-correcta").click(
-        () => (window.location = "pantalla5_heladeras.html")
+      $(".historia-correcta").click(() =>
+        onScreenChange("pantalla5_heladeras.html")
       );
 
       obj.onclick = function () {

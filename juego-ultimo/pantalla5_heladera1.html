@@ -191,12 +191,13 @@
           <button
             id=""
             role="link"
-            onclick="window.location='pantalla5_heladeras.html'"
+            onclick="onScreenChange('pantalla5_heladeras.html')"
           >
             <img src="images/exit.png" alt="" />
           </button>
         </div>
       </div>
+      <p class="timer"></p>
     </div>
 
     <script src="js/cartera.js"></script>
@@ -460,8 +461,8 @@
                 if (solPosicion4 !== medicina4) return;
                 puzzle.style.display = "none";
                 fondo.style.filter = "none";
-                Swal.fire("He encontrado el zolgensma.").then(
-                  () => (window.location = "pantalla5_farmacia.html")
+                Swal.fire("He encontrado el zolgensma.").then(() =>
+                  onScreenChange("pantalla5_farmacia.html")
                 );
 
                 cartera.agregar(ZOLGENSMA);

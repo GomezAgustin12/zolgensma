@@ -134,7 +134,7 @@
         <button id="btaceptar" class="boton objeto">ACEPTAR</button
         ><button
           id="btreset"
-          onclick="window.location = 'pantalla7_jeringa.html'"
+          onclick="onScreenChange('pantalla7_jeringa.html')"
           class="boton objeto"
         >
           VOLVER A EMPEZAR
@@ -148,6 +148,7 @@
           </div>
         </div>
       </div>
+      <p class="timer"></p>
     </div>
 
     <script src="js/cartera.js"></script>
@@ -170,10 +171,10 @@
 
       $("#btaceptar").click(() => {
         if (jeringa === 3) {
-          window.location = "pantalla8.html";
+          onScreenChange("pantalla8.html");
         } else {
-          Swal.fire("La dosis es incorrecta.").then(
-            () => (window.location = "pantalla7_jeringa.html")
+          Swal.fire("La dosis es incorrecta.").then(() =>
+            onScreenChange("pantalla7_jeringa.html")
           );
         }
       });

@@ -1,17 +1,38 @@
+const onScreenChange = (newScreen) => {
+  window.location = newScreen;
+  localStorage.setItem("min", min);
+  localStorage.setItem("contador", contador);
+};
+
 $(document).ready(function () {
+  //ESTE SCRIPT MANEJA EL CAMBIO DE PANTALLAS Y EL CONTADOR PARA EL RANKING
+  let segs = 0;
+  let contador = localStorage.getItem("contador") ?? 0;
+  let min = localStorage.getItem("min") ?? 0;
+  setInterval(() => {
+    contador++;
+    segs = contador % 60;
+    if (+contador % 60 === 0) {
+      min++;
+    }
+    $(".timer").html(`TIME ${min}:${segs}`);
+  }, 1000);
+
+  //-------------------------------------------------------------------------
+
   if (localStorage.getItem("cartera") === null) {
     var carteraArray = [];
   } else {
     if (localStorage.getItem("cartera")) {
-    if (!localStorage.getItem("cartera").includes(',')) {
-      var carteraArray = [localStorage.getItem("cartera")]
+      if (!localStorage.getItem("cartera").includes(",")) {
+        var carteraArray = [localStorage.getItem("cartera")];
 
-      console.log(carteraArray);
-    } else {
-      var carteraArray = localStorage.getItem("cartera").split(", ");
+        console.log(carteraArray);
+      } else {
+        var carteraArray = localStorage.getItem("cartera").split(", ");
+      }
     }
-
-  } }
+  }
 
   cartera = {
     actualizar: () => {
@@ -33,17 +54,17 @@ $(document).ready(function () {
       });
       var displayNoneList = [];
       if (localStorage.getItem("displayNoneList")) {
-        if (!localStorage.getItem("displayNoneList").includes(',')) {
+        if (!localStorage.getItem("displayNoneList").includes(",")) {
           var displayNoneList = [localStorage.getItem("displayNoneList")];
         } else {
-           var displayNoneList = localStorage.getItem("displayNoneList").split(", ");
+          var displayNoneList = localStorage
+            .getItem("displayNoneList")
+            .split(", ");
         }
       }
 
-
-
       displayNoneList.forEach((e) => {
-        console.log(e)
+        console.log(e);
         $(`#${e}`).css({ display: "none" });
       });
     },
@@ -61,7 +82,7 @@ $(document).ready(function () {
       });
     },
     existe: (imagen) => {
-      return carteraArray.includes(imagen)
+      return carteraArray.includes(imagen);
     },
     agregar: ({ imagen, id = null }) => {
       if (cartera.existe(imagen)) return;

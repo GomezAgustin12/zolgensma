@@ -102,6 +102,7 @@
               </li>
             </ul>
           </div>
+
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/jQuery.verticalCarousel.js"></script>
@@ -118,11 +119,12 @@
           </button>
         </div>
         <div id="exitp2puerta" class="objeto">
-          <button id="" role="link" onclick="window.location='pantalla2.html'">
+          <button id="" role="link" onclick="onScreenChange('pantalla2.html')">
             <img src="images/exit.png" alt="" />
           </button>
         </div>
       </div>
+      <p class="timer"></p>
     </div>
     <script src="js/elementos.js"></script>
     <script src="js/cartera.js"></script>
@@ -167,17 +169,14 @@
       };
 
       $("#cajon-cerrado-btn").click(() => {
-
         if (cartera.existe(LLAVE.imagen)) {
-          window.location = "pantalla2_cajon.html";
+          onScreenChange("pantalla2_cajon.html");
         } else {
           Swal.fire(
             "He perdido la llave del cajón, seguro que se me ha caído en algún lado cerca de alguna planta."
           );
         }
       });
-
-
 
       var modalobj = document.getElementById("objetshow");
 

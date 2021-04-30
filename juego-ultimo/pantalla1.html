@@ -19,31 +19,14 @@
     <script src="sweetalert2.all.min.js"></script>
   </head>
   <body>
-    <div class="controles1-quiz">
-      <h3>
-        1- ¿Cuánto tiempo después de la infusión deberá controlar a su paciente?
-      </h3>
-      <button id="opcion1">opcion1</button>
-      <button id="opcion2">opcion2</button>
-      <button id="opcion3" class="correcta-quiz1">opcion3</button>
-    </div>
-    <div class="controles2-quiz">
-      <h3>2- ¿Qué controles se deberían realizar?</h3>
-      <button id="opcion1" class="correcta-quiz2">opcion1</button>
-      <button id="opcion2">opcion2</button>
-      <button id="opcion3">opcion3</button>
-    </div>
-    <p class="timer"></p>
+    <h1>ZOLGENSMA</h1>
+    <button onclick="window.location = 'pantalla2.html'">Empezar</button>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/jQuery.verticalCarousel.js"></script>
     <script>
-      $(".controles2-quiz").css({ display: "none" });
-
-      $(".correcta-quiz1").click(() => {
-        $(".controles1-quiz").css({ display: "none" });
-        $(".controles2-quiz").css({ display: "block" });
-      });
-      $(".correcta-quiz2").click(() => onScreenChange("pantalla11.html"));
+      localStorage.removeItem("cartera");
+      localStorage.removeItem("displayNoneList");
+      localStorage.removeItem("contador");
     </script>
   </body>
 </html>

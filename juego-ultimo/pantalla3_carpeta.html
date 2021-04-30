@@ -117,11 +117,12 @@
         </div>
 
         <div id="exitp2puerta" class="objeto">
-          <button id="" role="link" onclick="window.location='pantalla3.html'">
+          <button id="" role="link" onclick="onScreenChange('pantalla3.html')">
             <img src="images/exit.png" alt="" />
           </button>
         </div>
       </div>
+      <p class="timer"></p>
     </div>
     <script src="js/cartera.js"></script>
     <script src="js/elementos.js"></script>
@@ -180,9 +181,9 @@
           cartera.quitar(FICHA1C);
           cartera.quitar(FICHA2C);
           cartera.quitar(FICHA3C);
-          window.location = "pantalla3_fichas_completas.html";
+          onScreenChange("pantalla3_fichas_completas.html");
         } else {
-          window.location = "pantalla3_fichas.html";
+          onScreenChange("pantalla3_fichas.html");
         }
       });
 
