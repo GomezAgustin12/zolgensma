@@ -1,3 +1,4 @@
+//ESTA FUNCION MANEJA EL CAMBIO DE PANTALLAS
 const onScreenChange = (newScreen) => {
   window.location = newScreen;
   localStorage.setItem("min", min);
@@ -5,7 +6,7 @@ const onScreenChange = (newScreen) => {
 };
 
 $(document).ready(function () {
-  //ESTE SCRIPT MANEJA EL CAMBIO DE PANTALLAS Y EL CONTADOR PARA EL RANKING
+  //ESTE SCRIPT MANEJA EL CONTADOR PARA EL RANKING
   let segs = 0;
   let contador = localStorage.getItem("contador") ?? 0;
   let min = localStorage.getItem("min") ?? 0;
@@ -26,8 +27,6 @@ $(document).ready(function () {
     if (localStorage.getItem("cartera")) {
       if (!localStorage.getItem("cartera").includes(",")) {
         var carteraArray = [localStorage.getItem("cartera")];
-
-        console.log(carteraArray);
       } else {
         var carteraArray = localStorage.getItem("cartera").split(", ");
       }
@@ -64,7 +63,6 @@ $(document).ready(function () {
       }
 
       displayNoneList.forEach((e) => {
-        console.log(e);
         $(`#${e}`).css({ display: "none" });
       });
     },

@@ -14,9 +14,7 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="sweetalert2.min.css" />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="sweetalert2.all.min.js"></script>
   </head>
 
   <body>
@@ -170,15 +168,30 @@
       var span = document.getElementsByClassName("close")[0];
       var span = document.getElementsByClassName("modal")[0];
 
-      $("#letraz").click(() => cartera.agregar(LETRA_Z));
-      $("#letrao").click(() => cartera.agregar(LETRA_O));
-      $("#letral").click(() => cartera.agregar(LETRA_L));
-      $("#letrag").click(() => cartera.agregar(LETRA_G));
-      $("#letrae").click(() => cartera.agregar(LETRA_E));
-      $("#letran").click(() => cartera.agregar(LETRA_N));
-      $("#letras").click(() => cartera.agregar(LETRA_S));
-      $("#letram").click(() => cartera.agregar(LETRA_M));
-      $("#letraa").click(() => cartera.agregar(LETRA_A));
+      $("#letraz").click(() => verificarZolgensma(LETRA_Z));
+      $("#letrao").click(() => verificarZolgensma(LETRA_O));
+      $("#letral").click(() => verificarZolgensma(LETRA_L));
+      $("#letrag").click(() => verificarZolgensma(LETRA_G));
+      $("#letrae").click(() => verificarZolgensma(LETRA_E));
+      $("#letran").click(() => verificarZolgensma(LETRA_N));
+      $("#letras").click(() => verificarZolgensma(LETRA_S));
+      $("#letram").click(() => verificarZolgensma(LETRA_M));
+      $("#letraa").click(() => verificarZolgensma(LETRA_A));
+
+      const verificarZolgensma = (Letra) => {
+        cartera.agregar(Letra);
+        if (!cartera.existe(LETRA_Z.imagen)) return;
+        if (!cartera.existe(LETRA_O.imagen)) return;
+        if (!cartera.existe(LETRA_L.imagen)) return;
+        if (!cartera.existe(LETRA_G.imagen)) return;
+        if (!cartera.existe(LETRA_E.imagen)) return;
+        if (!cartera.existe(LETRA_N.imagen)) return;
+        if (!cartera.existe(LETRA_S.imagen)) return;
+        if (!cartera.existe(LETRA_M.imagen)) return;
+        if (!cartera.existe(LETRA_A.imagen)) return;
+        console.log("object");
+        onScreenChange("pantalla9.html");
+      };
 
       btn.onclick = function () {
         modal.style.display = "block";
